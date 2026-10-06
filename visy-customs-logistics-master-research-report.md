@@ -479,7 +479,193 @@ Sunext không đóng vai trò một broker địa phương cạnh tranh giật m
 
 ---
 
-## 12. BỘ 15 CÂU HỎI KHAI PHÁ THỰC ĐỊA GIÁ TRỊ CAO (HIGH-VALUE DISCOVERY QUESTIONS)
+## 12. KHUNG ỨNG DỤNG TRÍ TUỆ NHÂN TẠO & HỆ THỐNG TÁC NHÂN TỰ TRỊ (AI APPLICATIONS & AGENTIC ARCHITECTURE) CHO VISY
+
+Bản đồ vận hành của Visy với chuỗi cung ứng kinh tế tuần hoàn khép kín, danh mục hàng hóa đa dạng từ phế liệu thô đến hàng bán lẻ tiêu dùng, cùng áp lực tuân thủ pháp lý biên giới khắt khe của Úc (ABF/DAFF) tạo ra môi trường lý tưởng để triển khai các hệ thống **Tác nhân Trí tuệ Nhân tạo Tự trị (Autonomous AI Agents)**.
+
+Thay vì các giải pháp AI chung chung, dưới đây là khung 6 nhóm ứng dụng AI thực chiến được may đo chính xác theo cấu trúc tài khoản Visy, xếp hạng theo độ khả thi kỹ thuật và tỷ suất hoàn vốn (ROI):
+
+### 12.1 Nhóm 1: AI cho Hải quan & Tuân thủ Biên giới (Core Customs AI Cockpit)
+Đây là nhóm ứng dụng có tính khả thi kỹ thuật cao nhất và tạo ra ROI tức thì thông qua việc ngăn chặn trực tiếp các án phạt nghiêm ngặt (Strict Liability) theo Điều 243T/243U Luật Hải quan Úc.
+
+1. **HS Code Auto-Classification Engine (Bộ máy Tự động Phân loại Biểu thuế HS):**
+   - *Vấn đề Visy:* Hàng chục nghìn SKU bán lẻ của Visy Retail Services (VRS), hàng nghìn mã phụ tùng MRO nhà máy và danh mục nguyên vật liệu phế liệu của Visy Global Trading khiến đội ngũ chuyên viên hải quan của Brant Crowley luôn đối mặt với rủi ro kê khai sai mã HS.
+   - *Kiến trúc AI:* Kết hợp mô hình ngôn ngữ lớn (LLM) và kỹ thuật Tìm kiếm Tăng cường Tri thức (RAG) được huấn luyện chuyên sâu trên dữ liệu:
+     - Biểu thuế Hải quan Nhập khẩu Úc (*Australian Working Tariff Schedule 3*).
+     - Chú giải Chi tiết Hệ thống Hài hòa của Tổ chức Hải quan Thế giới (*WCO Explanatory Notes*).
+     - Toàn bộ cơ sở dữ liệu Phán quyết Trước công khai của Cục Biên phòng Úc (*ABF Pre-classification & Advance Rulings*).
+   - *Đầu vào (Input):* Tên thương mại sản phẩm, hình ảnh chụp thực tế, bảng thông số kỹ thuật (TDS - Technical Data Sheet) và thành phần vật liệu.
+   - *Đầu ra (Output):* Top 3 mã HS khả thi nhất kèm điểm số xác suất (confidence score), căn cứ pháp lý áp dụng 6 Quy tắc Phân loại Tổng quát (GIR), và danh sách lý do loại trừ các mã HS lân cận.
+   - *Tích hợp:* Hoạt động như một plugin nhúng trực tiếp vào CargoWise One qua giao thức eAdaptor API — AI tự động điền gợi ý mã HS vào trường tờ khai, chuyên viên hải quan chỉ cần kiểm tra và bấm phê duyệt (Human-in-the-loop).
+   - *Giá trị kinh tế:* Cắt giảm 60% – 80% thời gian phân loại dòng hàng, loại bỏ 99% rủi ro bị truy thu thuế và phạt tiền sau thông quan.
+
+2. **C/O (Chứng nhận Xuất xứ) Intelligent Validator:**
+   - *Vấn đề Visy:* Với 78% chi tiêu mua hàng tại Châu Á của VRS, các lô hàng phụ thuộc tuyệt đối vào C/O Form ChAFTA (Trung Quốc), RCEP, AANZFTA để hưởng thuế suất ưu đãi 0%. Việc sai sót quy tắc cụ thể mặt hàng (PSR - Product Specific Rules) hoặc hóa đơn bên thứ ba (Third-party invoicing) dẫn đến bị bác quyền ưu đãi và truy thu thuế 5% MFN.
+   - *Kiến trúc AI:* Tác nhân thị giác & OCR đa phương thức (Multimodal Document Agent) tự động quét tệp PDF C/O, đối chiếu chéo 3 chiều:
+     - Khớp mã HS trên C/O với Manifest và Commercial Invoice.
+     - Khớp tên nhà sản xuất trên C/O với quy định hóa đơn bên thứ ba (Kiểm tra ô Rule 13 / Box 10).
+     - Thẩm định tiêu chí xuất xứ (PSR: CTH, CTSH hay hàm lượng RVC >40%) theo đúng hiệp định FTA áp dụng.
+   - *Đầu ra:* Điểm số rủi ro tuân thủ (Compliance Risk Score 0–100) và danh mục cảnh báo thiếu sót trước khi tàu xuất bến.
+   - *Giá trị:* Phát hiện lỗi C/O ngay tại nguồn ở Châu Á, cho phép nhà cung cấp sửa đổi trước khi tàu cập cảng Úc.
+
+3. **TCO Research & Application Drafting Agent (Tác nhân Nghiên cứu & Soạn thảo Hồ sơ TCO):**
+   - *Vấn đề Visy:* Visy vừa nộp đơn xin Lệnh Giảm Thuế (TCO) cho máy móc tái chế (HS 8479.82.00) để tiết kiệm 5% thuế, vừa theo dõi Công báo ABF để đệ đơn bãi bỏ (Revocation) các TCO của đối thủ trong mảng bao bì nhựa/màng mỏng. Đây là công việc nghiên cứu pháp lý thủ công tốn hàng trăm giờ làm việc.
+   - *Kiến trúc AI:* Agent tự động cào dữ liệu (automated scraping) toàn bộ Công báo ABF (*Tariff Concession Gazettes*) và thông báo của Ủy ban Giải pháp Thương mại Úc phát hành hàng tuần:
+     - Quét và phát hiện các TCO đối thủ nộp đơn liên quan đến ngành bao bì, đối chiếu với danh mục sản phẩm Visy Plastics/Packaging để tự động soạn thảo Thư Phản đối (Objection / Revocation Submission) chứng minh Visy có năng lực sản xuất hàng hóa thay thế (*substitutable goods in ordinary course of business*).
+     - Đối với các dự án CapEx máy móc (Yatala, Coolaroo), Agent tự động rà soát tiền lệ và soạn thảo hồ sơ xin cấp TCO mới.
+   - *Giá trị:* Chuyển đổi quy trình nghiên cứu TCO từ thủ công hàng tháng thành hệ thống radar cảnh báo và soạn thảo tự động theo thời gian thực.
+
+4. **DAFF / BICON Biosecurity Compliance Pre-Check (Tiền Kiểm dịch Sinh học):**
+   - *Vấn đề Visy:* Úc duy trì hàng rào kiểm dịch sinh học nghiêm ngặt nhất thế giới; sai sót về bao bì gỗ ISPM 15 hoặc hun trùng sâu bọ BMSB dẫn đến việc container bị từ chối cập cảng hoặc buộc tái xuất ngay tại phao số 0.
+   - *Kiến trúc AI:* 
+     - Thị giác máy tính (Computer Vision) phân tích hình ảnh dấu khắc kiểm dịch nhiệt ISPM 15 trên pallet và kiện gỗ máy móc (kiểm tra mã quốc gia, mã nhà xưởng, ký hiệu HT/MB).
+     - OCR đối soát chứng thư hun trùng (Fumigation Certificate) với cơ sở dữ liệu BICON của Bộ Nông nghiệp Úc (DAFF).
+     - Tự động kiểm tra chéo cảng bốc hàng và xuất xứ hàng hóa với danh mục quốc gia rủi ro cao mùa dịch BMSB (Target Risk Countries từ 01/09 đến 30/04).
+   - *Giá trị:* Ngăn chặn 95%+ rủi ro bị giữ hàng hoặc phạt tái xuất container ngay từ cảng xếp hàng Châu Âu/Mỹ.
+
+---
+
+### 12.2 Nhóm 2: AI cho Chuỗi Cung ứng & Vận hành Logistics (Supply Chain & Operations)
+
+1. **Container Dwell Time & Demurrage Predictor (Dự báo Thời gian Lưu Bãi Cảng):**
+   - *Vấn đề Visy:* Chi phí phạt lưu vỏ container (Demurrage & Detention) và phí lưu bãi cảng (Storage) là nguồn thất thoát tài chính lớn khi chứng từ bị chậm trễ hoặc giờ lấy hàng bị xung đột.
+   - *Kiến trúc AI:* Mô hình học máy (Machine Learning) được huấn luyện trên dữ liệu lịch sử thời gian lưu bãi tại Cảng Melbourne (Swanson/Webb Dock), Port Botany (Patrick/DP World) và Cảng Brisbane theo:
+     - Hãng tàu chuyên chở (Maersk, Hapag-Lloyd, CMA CGM).
+     - Tuyến vận tải biển và mùa vụ dịch hại sinh học (BMSB).
+     - Tình trạng xử lý chứng từ của từng Business Unit (VRS, Visy Glass, CapEx).
+   - *Giá trị:* Tự động gắn cờ cảnh báo nguy cơ trễ hạn (Demurrage Risk Flag) trước 72 giờ, chỉ đạo đội ngũ logistics ưu tiên đẩy nhanh thông quan cho các lô hàng có nguy cơ phát sinh tiền phạt cao nhất.
+
+2. **Production Down → Spare Parts Auto-Routing Agent (Điều phối Phụ tùng Khẩn cấp Khi Dừng Máy):**
+   - *Vấn đề Visy:* Các dây chuyền sản xuất giấy kraft Tumut, lò nung Penrith, máy cán lon Smithfield chạy 24/7. Mỗi giờ dừng máy gây tổn thất hàng trăm nghìn AUD. Khi hỏng hóc phát sinh, phụ tùng phải bay hỏa tốc từ Châu Âu/Singapore về sân bay Sydney/Melbourne.
+   - *Kiến trúc AI:* Tác nhân tự động kết nối trực tiếp với Hệ thống Quản trị Bảo trì Nhà máy (CMMS / SAP PM):
+     - Khi nhận tín hiệu cảnh báo sự cố dừng máy khẩn cấp ("line-down event"), Agent tự động truy xuất mã phụ tùng OEM trong catalog kỹ thuật.
+     - Kiểm tra tồn kho tại các kho trung chuyển quốc tế (Singapore Hub, Đức, Thụy Sĩ).
+     - Tự động phát lệnh giữ chỗ vận tải hàng không hỏa tốc (Airfreight priority booking) và kích hoạt Bàn Trực Hải quan Khẩn cấp 24/7 (Emergency Customs Clearance Desk) tại Sydney/Melbourne.
+     - Định tuyến lộ trình vận chuyển và cập nhật trạng thái từng phút cho Giám đốc Nhà máy.
+   - *Giá trị:* Rút ngắn thời gian cung ứng phụ tùng thay thế từ 12–24 giờ xuống chỉ còn 4–6 giờ, cứu vãn hàng triệu AUD chi phí dừng chuyền.
+
+3. **Tumut Kraft Paper Export Document Validator (Tự động Thẩm định Chứng từ Xuất khẩu Giấy):**
+   - *Vấn đề Visy:* Nhà máy Tumut xuất khẩu hơn 680.000 tấn giấy/năm qua ga RiFL Bomen về Port Botany. Mỗi chuyến tàu chạy đòi hỏi lập hàng loạt số khai báo xuất khẩu (EDN), chứng nhận xuất xứ và kiểm định bao bì.
+   - *Kiến trúc AI:* Tác nhân tự động đối soát tính nhất quán 100% giữa Hóa đơn thương mại ↔ Bảng kê chi tiết (Packing List) ↔ Vận đơn đường sắt/đường biển (B/L) ↔ Tờ khai xuất khẩu EDN. Tự động phát hiện sai lệch trọng lượng hoặc mã HS 4804 trước khi nộp lên hệ thống ICS của Hải quan.
+
+---
+
+### 12.3 Nhóm 3: AI cho Chế tạo & Quản lý Dự án CapEx 2 Tỷ AUD (Manufacturing & CapEx)
+
+1. **CapEx Equipment Import Coordinator (Điều phối Nhập khẩu Thiết bị Dự án):**
+   - *Vấn đề Visy:* Chương trình đầu tư công nghiệp 2 tỷ AUD (Yatala 500M, Penrith 150M, Coolaroo 42,5M) phát sinh hàng trăm kiện máy móc siêu trường siêu trọng (Breakbulk/OOG) từ Voith, Valmet, Bucher Emhart Glass, SORG.
+   - *Kiến trúc AI:* Trợ lý ảo quản lý dự án đóng vai trò "Nhạc trưởng Nhập khẩu":
+     - Theo dõi tiến độ chế tạo và bàn giao tại các xưởng cơ khí Châu Âu.
+     - Tự động trích xuất dữ liệu từ bảng kê chi tiết thiết bị của nhà sản xuất (OEM Packing Lists) để soạn thảo trước tờ khai hải quan Chương 84/85.
+     - Tự động cảnh báo các đợt giao hàng rơi vào mùa kiểm dịch BMSB để kích hoạt khử trùng tại cảng đi (Antwerp, Hamburg, Genoa).
+     - Soạn thảo hồ sơ xin Lệnh Giảm Thuế (TCO) đồng bộ với tiến độ mở L/C.
+
+2. **Tooling Repair Digital Twin Workflow (Quản lý Vòng đời Đầu đột Tạo hình Lon Yatala):**
+   - *Vấn đề Visy:* Nhà máy sản xuất lon đồ uống Yatala định kỳ phải gửi các đầu đột tạo hình lon (forming punches) ra nước ngoài bảo dưỡng. Quy trình tạm xuất tái nhập đòi hỏi kiểm soát số sê-ri khắt khe và chỉ tính thuế trên giá trị gia tăng sửa chữa.
+   - *Kiến trúc AI:* Thiết lập hồ sơ kỹ thuật số (Digital Twin) cho từng bộ khuôn đột:
+     - Lưu trữ số sê-ri dập nổi, ảnh chụp độ phân giải cao và lịch sử bảo dưỡng.
+     - Agent tự động điền tờ khai tạm xuất kèm mã nhận diện sê-ri gửi Hải quan Úc.
+     - Khi tái nhập: Sử dụng thị giác máy tính đối chiếu ảnh chụp tại cảng Úc với ảnh gốc để xác thực tính đồng nhất.
+     - Tự động tách bạch hóa đơn chi phí nhân công sửa chữa với trị giá gốc của thiết bị để tính thuế chính xác theo luật, loại bỏ hoàn toàn việc nộp nhầm thuế trên toàn bộ trị giá sản phẩm.
+
+---
+
+### 12.4 Nhóm 4: AI cho Bán lẻ & Phân phối Bunnings (Retail & Distribution)
+
+1. **VRS SKU Consolidation & HS Master Data Mapping (Chuẩn hóa Dữ liệu Sản phẩm Bán lẻ):**
+   - *Vấn đề Visy:* Sau thương vụ mua lại Zenexus (VRS) và Packsize, hàng nghìn SKU bán lẻ bị trùng lặp mã hàng, thiếu chuẩn hóa dữ liệu mô tả và sai lệch mã HS giữa các hệ thống kế toán cũ.
+   - *Kiến trúc AI:* Kết hợp LLM và Vision Model quét toàn bộ danh mục sản phẩm VRS từ các nhà cung ứng Trung Quốc:
+     - Tự động nhận diện và gán mã HS chuẩn xác dựa trên hình ảnh bao bì, kích thước và công năng.
+     - Phát hiện các mã hàng trùng lặp (Duplicate SKUs) nhưng đang bị áp 2 mã HS khác nhau.
+     - Tự động đề xuất mẫu C/O ưu đãi phù hợp cho từng mặt hàng.
+   - *Giá trị:* Rút ngắn thời gian chuẩn hóa dữ liệu Master Data từ 1–2 năm làm thủ công xuống còn 3–6 tháng.
+
+2. **Bunnings Replenishment & Safety Stock Forecast (Dự báo Nhu cầu Tái bổ hàng Chuỗi Bunnings):**
+   - *Vấn đề Visy:* Chuỗi bán lẻ Bunnings (Úc/NZ) và HomeBase (UK) áp dụng tiêu chuẩn sẵn sàng trên kệ (On-Shelf Availability) >95%. Hụt hàng dẫn đến phạt hợp đồng; tồn kho quá mức làm tăng chi phí lưu kho.
+   - *Kiến trúc AI:* Mô hình dự báo chuỗi thời gian (Prophet / DeepAR) phân tích dữ liệu POS từ hệ thống Bunnings kết hợp với dữ liệu bán hàng lịch sử của VRS:
+     - Tính toán mức tồn kho an toàn động (Dynamic Safety Stock) theo thời gian vận chuyển đường biển từ Trung Quốc (lead time 30–45 ngày).
+     - Tự động phát lệnh đặt hàng (Auto-PO) khi tồn kho chạm ngưỡng cảnh báo, bảo đảm duy trì tỷ lệ đáp ứng đơn hàng >98%.
+
+3. **VGL Rail & Intermodal Route Optimization (Tối ưu hóa Tuyến Đường sắt Tumut → Port Botany):**
+   - *Vấn đề Visy:* Tuyến đường sắt chuyên tuyến giữa ga cạn RiFL Bomen và Cảng Port Botany do Qube vận hành đóng vai trò huyết mạch xuất khẩu giấy kraft.
+   - *Kiến trúc AI:* Tối ưu hóa hệ số chất xếp (Load Factor) trên từng đoàn tàu dựa trên sản lượng giấy ra lò tại Tumut; dự báo các nguy cơ nghẽn mạng lưới đường sắt để điều phối linh hoạt đội xe đầu kéo trung chuyển tại terminal Bomen, nâng cao công suất thông qua (throughput) thêm 10% – 15%.
+
+---
+
+### 12.5 Nhóm 5: AI cho ESG, Tuân thủ & Phòng vệ Pháp lý (ESG, Compliance & Risk Defense)
+
+1. **Modern Slavery Supplier Auto-Screening (Tự động Giám sát Lao động Chuỗi Cung ứng Châu Á):**
+   - *Vấn đề Visy:* Báo cáo Modern Slavery Statement bắt buộc theo luật Úc đòi hỏi Visy phải chứng minh thẩm định chuỗi cung ứng (due diligence) đối với 78% nhà cung ứng Châu Á của VRS.
+   - *Kiến trúc AI:* Agent tự động quét tin tức báo chí, dữ liệu hải quan quốc tế và các báo cáo điều tra của các tổ chức phi chính phủ (NGOs) liên quan đến các nhà máy gia công Trung Quốc:
+     - Chấm điểm rủi ro lao động cưỡng bức dựa trên vị trí địa lý (các tỉnh có rủi ro cao), ngành nghề và lịch sử kiểm toán.
+     - Tự động đối soát báo cáo kiểm toán SMETA/BSCI của nhà cung cấp.
+     - Tự động xuất bản thảo chương Báo cáo Chuỗi Cung ứng cho Báo cáo Modern Slavery hàng năm của Visy Board.
+
+2. **Customs Post-Entry Audit AI (Kiểm toán Sau Thông quan Tự động):**
+   - *Vấn đề Visy:* Cục Biên phòng Úc (ABF) có quyền kiểm tra sau thông quan và truy thu thuế trong thời hạn 4–5 năm.
+   - *Kiến trúc AI:* Agent lấy mẫu tự động từ 100 đến 500 tờ khai lịch sử trong CargoWise One:
+     - Soát xét lại mã HS đã khai với các Phán quyết Trước mới nhất của ABF.
+     - Kiểm tra xem có lô hàng nào chịu thuế 5% mà thực chất đủ điều kiện áp dụng TCO hoặc C/O ưu đãi để nộp hồ sơ xin **Hoàn thuế (Customs Duty Refund under Section 163)**.
+     - Phát hiện các lỗi khai sai tiềm ẩn để Visy chủ động nộp hồ sơ Khai báo Tự nguyện (Voluntary Disclosure), triệt tiêu 100% tiền phạt hành chính theo Điều 243T.
+   - *Giá trị:* Khả năng thu hồi hàng triệu AUD tiền thuế nộp thừa và bảo vệ doanh nghiệp trước các đợt thanh tra của ABF.
+
+3. **Anti-Dumping Risk Monitor (Giám sát Rủi ro Thuế Chống Bán Phá giá):**
+   - *Vấn đề Visy:* Mặc dù tro sô-đa không chịu thuế chống bán phá giá, nhưng các sản phẩm nhôm cuộn, màng nhựa, thép dây gia công nhập khẩu từ Trung Quốc luôn nằm trong tầm ngắm của Ủy ban Giải pháp Thương mại Úc.
+   - *Kiến trúc AI:* Tự động quét Công báo của Ủy ban Chống bán phá giá hàng ngày, phát hiện sớm các cuộc điều tra liên quan đến danh mục mã HS hoặc nhà cung ứng của Visy để kịp thời điều chuyển nguồn cung.
+
+---
+
+### 12.6 Nhóm 6: AI cho Kinh tế Tuần hoàn & Tối ưu hóa Sản xuất (Sustainability & Circular Economy)
+
+1. **Computer Vision Phân loại Phế liệu Tái chế tại MRF (Recycling Quality Predictor):**
+   - *Vấn đề Visy:* Visy Recycling thu gom và phân loại hơn 1,7 triệu tấn rác tái chế/năm. Đạo luật Giảm thiểu Rác thải 2020 siết chặt tỷ lệ tạp chất trong phế liệu xuất khẩu.
+   - *Kiến trúc AI:* Hệ thống camera quang học và thị giác máy tính tại các băng chuyền phân loại trạm MRF:
+     - Phân loại thời gian thực: Giấy carton OCC vs giấy trắng SOP vs giấy hỗn hợp; hạt nhựa PET trong suốt vs PET màu; phoi nhôm vs tạp chất kim loại.
+     - Phát hiện và kích hoạt cánh tay robot hoặc luồng khí đẩy loại bỏ rác thải hữu cơ, mảnh kính vụn và chất gây ô nhiễm.
+   - *Giá trị:* Nâng cao độ tinh khiết của kiện hàng tái chế thêm 5% – 10%, bảo đảm đáp ứng 100% tiêu chuẩn xuất khẩu phế liệu quốc tế.
+
+2. **Reinforcement Learning Tối ưu hóa Lò nấu Thủy tinh Oxy-Fuel (Yatala & Penrith):**
+   - *Vấn đề Visy:* Lò nấu thủy tinh tiêu thụ nguồn năng lượng khổng lồ. Dự án lò nung oxy-fuel 150 triệu AUD tại Penrith và tổ hợp Yatala đòi hỏi vận hành ở nhiệt độ cực kỳ chính xác.
+   - *Kiến trúc AI:* Mô hình học tăng cường (Reinforcement Learning) tự động điều chỉnh lưu lượng oxy và khí đốt dựa trên:
+     - Tỷ lệ mảnh kính vụn tái chế (cullet) nạp vào mẻ nấu.
+     - Độ ẩm và chất lượng tro sô-đa, cát thạch anh.
+     - Nhiệt độ thân lò và nồng độ khí thải.
+   - *Giá trị:* Tiết kiệm 8% – 12% chi phí năng lượng và kéo dài tuổi thọ lò nấu thêm 2–3 năm.
+
+3. **Tumut Kraft Mill Advanced Process Optimization (Tối ưu hóa Quy trình Sản xuất Bột giấy):**
+   - *Kiến trúc AI:* Phối hợp với hệ thống điều khiển tự động của Valmet / ABB để dự đoán độ bền kéo (tensile strength) của giấy cuộn kraft linerboard ngay trong giai đoạn nấu bột, giảm tỷ lệ sản phẩm lỗi và tối ưu hóa lượng hóa chất tẩy rửa.
+
+---
+
+### 12.7 Ba Gói Đề Xuất Ưu Tiên Tiếp Cận Thương Mại (Strategic AI Offerings)
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                   MA TRẬN ĐÁNH GIÁ 3 GÓI ĐỀ XUẤT AI CHIẾN LƯỢC CHO VISY               │
+├─────────┬───────────────────────────┬──────────────┬─────────────┬─────────────────────┤
+│ GÓI     │ TÊN GÓI GIẢI PHÁP AI      │ ĐỐI TƯỢNG    │ THỜI GIAN   │ LỢI THẾ CẠNH TRANH  │
+│         │                           │ MỤC TIÊU     │ TRIỂN KHAI  │ ĐỘC QUYỀN SUNEXT    │
+├─────────┼───────────────────────────┼──────────────┼─────────────┼─────────────────────┤
+│ **GÓI A**│ **Visy Customs AI Cockpit**│ Denis Conway │ **90 Ngày** │ • Dữ liệu ABF mở sẵn│
+│ (Ưu tiên│ (HS Engine + C/O Validator│ (Procurement)│ Thí điểm    │ • Cùng múi giờ APAC │
+│ số 1)   │ + TCO Agent + DAFF Check) │ & Brant C.   │             │ • Plugin CargoWise  │
+├─────────┼───────────────────────────┼──────────────┼─────────────┼─────────────────────┤
+│ **GÓI B**│ **Emergency Spare Parts   │ GĐ Nhà máy   │ **60 Ngày** │ • Cắt giảm 70% thời │
+│         │ Auto-Routing Agent**      │ Yatala /     │ Proof of    │   gian dừng máy     │
+│         │ (Cứu nguy dừng chuyền)   │ Penrith      │ Concept     │ • Kết hợp airfreight│
+├─────────┼───────────────────────────┼──────────────┼─────────────┼─────────────────────┤
+│ **GÓI C**│ **Compliance Defense Suite│ Lee Du &     │ **120 Ngày**│ • Bảo vệ hợp đồng   │
+│         │ (Modern Slavery Audit +   │ Nella M.     │ Toàn diện   │   Bunnings Group    │
+│         │ Customs Post-Audit AI)**  │ (ESG/Legal)  │             │ • Tự động hóa SMETA │
+└─────────┴───────────────────────────┴──────────────┴─────────────┴─────────────────────┘
+```
+
+> [!TIP]
+> **Khuyến nghị mũi nhọn số 1:** Tiếp cận Ban Mua sắm (Denis Conway) và Trưởng bộ phận Hải quan Tập đoàn (Brant Crowley) bằng **Gói A: Visy Customs AI Cockpit**. Đây là giải pháp đánh trúng nhu cầu bảo vệ giá trị (Value Assurance) của VGL, không đối đầu trực tiếp với bộ máy hiện có mà cung cấp công cụ tự động hóa giải phóng sức lao động cho đội ngũ hải quan nội bộ.
+
+---
+
+## 13. BỘ 15 CÂU HỎI KHAI PHÁ THỰC ĐỊA GIÁ TRỊ CAO (HIGH-VALUE DISCOVERY QUESTIONS)
 
 ### Nhóm 1: Xác định ranh giới tự thực hiện và thuê ngoài (Make-vs-Buy Boundaries)
 1. *"Hiện tại trong cơ cấu tập đoàn, VGL đang trực tiếp đứng tên khai báo hải quan cho 100% các pháp nhân thành viên, hay các đơn vị sáp nhập gần đây như Visy Retail Services (Zenexus trước đây) hoặc Visy Specialties vẫn duy trì các đại lý hải quan bên ngoài?"*
@@ -508,7 +694,7 @@ Sunext không đóng vai trò một broker địa phương cạnh tranh giật m
 
 ---
 
-## 13. BẢNG QUẢN TRỊ KHOẢNG TRỐNG DỮ LIỆU (INTELLIGENCE GAPS & VERIFICATION PROTOCOL)
+## 14. BẢNG QUẢN TRỊ KHOẢNG TRỐNG DỮ LIỆU (INTELLIGENCE GAPS & VERIFICATION PROTOCOL)
 
 | Khoảng trống thông tin (Unknowns) | Tại sao bắt buộc phải xác minh? | Phương pháp thu thập & Xác thực an toàn |
 |---|---|---|
@@ -521,7 +707,7 @@ Sunext không đóng vai trò một broker địa phương cạnh tranh giật m
 
 ---
 
-## 14. DANH MỤC 75 NGUỒN DẪN CHỨNG CHÍNH THỨC (COMPLETE SOURCE REGISTER)
+## 15. DANH MỤC 75 NGUỒN DẪN CHỨNG CHÍNH THỨC (COMPLETE SOURCE REGISTER)
 
 Toàn bộ thông tin trong báo cáo tổng hợp này được chắt lọc và đối chiếu chéo từ 75 nguồn dữ liệu chính thức, phân chia theo 3 cấp độ tin cậy:
 
@@ -608,7 +794,7 @@ Toàn bộ thông tin trong báo cáo tổng hợp này được chắt lọc v�
 
 ---
 
-## 15. BẢN KIỂM SOÁT HÀNH ĐỘNG THÂM NHẬP GẮN VỚI MILESTONE THỰC TẾ
+## 16. BẢN KIỂM SOÁT HÀNH ĐỘNG THÂM NHẬP GẮN VỚI MILESTONE THỰC TẾ
 
 Thay vì áp dụng mốc thời gian trừu tượng, kế hoạch tác chiến 5 bước được đồng bộ hóa trực tiếp với **Chu kỳ Mùa vụ Pháp lý & Sự kiện Thương mại Thực tế của Ngành Logistics Úc**:
 

@@ -14,13 +14,13 @@
 - **Bản Đồ 7 Tuyến Vận Tải Quốc Tế (Trade Lanes):** Huy hiệu luồng hàng, nhãn phương thức (Sea FCL, Air Express, Breakbulk, Dry Bulk, Rail), và thước đo rủi ro thủ tục hải quan.
 - **Sơ Đồ Mermaid.js Trực Quan:** Bản đồ kinh tế tuần hoàn khép kín, phân tích khoảng trống tự thực hiện vs thuê ngoài (Make-vs-Buy), sơ đồ trung tâm ra quyết định (Buying Centre) và lộ trình 5 giai đoạn.
 - **Bộ 15 Câu Hỏi Khai Phá Thực Địa Giá Trị Cao:** Phân loại theo 4 nhóm chiến lược, nút **"Sao chép câu hỏi"** nhanh.
-- **Sổ Đăng Ký 68 Nguồn Dẫn Chứng (Source Register):** Lọc nhanh theo Tier 1 (Pháp lý/Visy), Tier 2 (Đối tác/Vận hành), Tier 3 (Hồ sơ chuyên gia).
+- **Sổ Đăng Ký 75 Nguồn Dẫn Chứng (Source Register):** Lọc nhanh theo Tier 1 (Pháp lý/Visy - 29), Tier 2 (Đối tác/Vận hành - 25), Tier 3 (Hồ sơ chuyên gia - 21).
 - **Bản Kiểm Soát Hành Động 5 Bước (Tactical Action Checklist):** Checkbox lưu trạng thái thời gian thực vào LocalStorage, hỗ trợ theo dõi tiến độ thực địa với thanh tiến trình gradient sống động.
 - **Tìm Kiếm Nhanh Toàn Diện (`Cmd + K`):** Hỗ trợ tìm kiếm tức thì theo từ khóa, nhân sự, mã HS, rủi ro pháp lý.
 
 ---
 
-## 📁 Cấu Trúc Báo Cáo 14 Chương
+## 📁 Cấu Trúc Báo Cáo 16 Chương
 
 1. **Chương 01:** Tóm Lược Tình Báo Ban Điều Hành & Nghịch Lý Cấu Trúc Visy
 2. **Chương 02:** Hệ Thống Kiểm Soát Sự Thật & Quy Chuẩn Bằng Chứng (Epistemic Governance)
@@ -31,11 +31,13 @@
 7. **Chương 07:** Bức Tranh Đối Thủ Cạnh Tranh & Hiện Trạng Nhà Cung Ứng (VGL, Maersk, Qube, Linfox, Expeditors, Mondiale VGL)
 8. **Chương 08:** Bản Đồ Cơ Hội & Xếp Hạng Mũi Nhọn Thâm Nhập (Công thức tính điểm & 9 cơ hội)
 9. **Chương 09:** Sơ Đồ Trung Tâm Ra Quyết Định (Buying Centre Dynamics & 10 Hồ sơ nhân sự chủ chốt)
-10. **Chương 10:** Kiến Trúc Tích Hợp Hệ Thống ERP / CargoWise & Giao Diện Dữ Liệu Độc Lập (Headless Customs Data Architecture)
-11. **Chương 11:** Bộ 15 Câu Hỏi Khai Phá Thực Địa Giá Trị Cao (High-Value Discovery Questions)
-12. **Chương 12:** Bảng Quản Trị Khoảng Trống Dữ Liệu (Intelligence Gaps & Verification Protocol)
-13. **Chương 13:** Danh Mục Tài Liệu Dẫn Chứng & Nguồn Tình Báo (68 Nguồn Tier 1, 2, 3)
-14. **Chương 14:** Lộ Trình Hành Động Tác Chiến Chi Tiết Dành Cho Đội Ngũ Thực Địa (Milestone Cycle & 5-Step Action Checklist)
+10. **Chương 10:** Kiến Trúc Tích Hợp Hệ Thống ERP / CargoWise & Tình Trạng Chứng Nhận ATT
+11. **Chương 11:** Chiến Lược Thâm Nhập Từ Điểm Tựa Việt Nam (The Vietnam Wedge Cho Sunext & VGL Vietnam)
+12. **Chương 12:** Khung Ứng Dụng Trí Tuệ Nhân Tạo & Hệ Thống Tác Nhân Tự Trị (AI Applications & Agentic Architecture Cho Visy)
+13. **Chương 13:** Bộ 15 Câu Hỏi Khai Phá Thực Địa Giá Trị Cao (High-Value Discovery Questions)
+14. **Chương 14:** Bảng Quản Trị Khoảng Trống Dữ Liệu (Intelligence Gaps & Verification Protocol)
+15. **Chương 15:** Danh Mục 75 Nguồn Dẫn Chứng Chính Thức (Complete Source Register: Tier 1, Tier 2, Tier 3)
+16. **Chương 16:** Bản Kiểm Soát Hành Động Thâm Nhập Gắn Với Milestone Thực Tế & Nguyên Tắc Cốt Tử
 
 ---
 
