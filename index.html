@@ -1725,36 +1725,39 @@
   <header class="top-header">
     <div class="reading-progress-bar" id="readingProgress"></div>
     <div class="brand-wrapper">
+      <button class="mobile-menu-btn" onclick="openMobileDrawer()" aria-label="Mở menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
       <div class="brand-logo-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
         <span>VISY</span>
-        <span style="font-size:0.65rem; opacity:0.85; font-weight:500;">INTELLIGENCE</span>
       </div>
       <div class="brand-title-group">
-        <h1>
-          <span>Báo Cáo Tình Báo Chiến Lược: Hải Quan & Logistics Úc</span>
-          <span class="meta-badge purple" style="font-size:0.65rem; padding:0.1rem 0.4rem;">EXECUTIVE MASTER</span>
-        </h1>
-        <div class="brand-subtitle">Sunext Strategic Intelligence • Client-Only Confidential Dossier</div>
+        <h1>CUSTOMS & LOGISTICS STRATEGY <span class="meta-badge orange">CONFIDENTIAL</span></h1>
+        <div class="brand-subtitle">Executive Strategic Dossier • Australia & APAC Market Penetration Map</div>
       </div>
     </div>
 
     <!-- METRICS TICKER -->
     <div class="header-stats-ticker">
-      <div class="stat-pill">Nội bộ hoá logistics: <strong class="purple">>40M AUD</strong></div>
-      <div class="stat-pill">Mạng lưới VGL: <strong class="orange">200k–240k TEU</strong></div>
-      <div class="stat-pill">Sản lượng Kraft Tumut: <strong class="purple">>680k Tấn/năm</strong></div>
-      <div class="stat-pill">VRS Chi tiêu Châu Á: <strong class="orange">78% Spend</strong></div>
-      <div class="stat-pill">Dự án Thủy tinh Yatala: <strong class="purple">$500M AUD</strong></div>
-      <div class="stat-pill">Giấy phép ABF: <strong class="orange">ABN 12 089 137 986</strong></div>
+      <div class="stat-pill">💼 <strong class="purple">>40M AUD</strong> Nội Bộ Hoá</div>
+      <div class="stat-pill">🌐 <strong class="orange">240k TEU</strong> VGL Network</div>
+      <div class="stat-pill">🏭 <strong class="purple">>680k Tấn</strong> Tumut / Năm</div>
+      <div class="stat-pill">🛒 <strong class="orange">78%</strong> VRS Spend Châu Á</div>
+      <div class="stat-pill">🔍 <strong class="purple">68</strong> Bằng Chứng</div>
+      <div class="stat-pill">⚡ <strong class="orange">90 Ngày</strong> Pilot</div>
     </div>
 
     <div class="header-actions">
       <button class="icon-btn" id="searchBtn" title="Tìm kiếm nhanh (Cmd + K)">
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </button>
       <button class="icon-btn" id="themeToggleBtn" title="Chuyển chế độ Sáng / Tối">
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+        <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
+      <a href="#sec-13" class="btn btn-purple" style="font-size:0.8rem; padding:0.4rem 0.85rem; border-radius:var(--radius-sm); text-decoration:none; font-weight:700; color:#fff; background:var(--color-purple); display:inline-flex; align-items:center; gap:0.35rem;">
+        <span>68 Nguồn Dẫn Chứng</span>
+      </a>
       <button class="icon-btn" onclick="window.print()" title="In / Xuất PDF">
         <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
       </button>
@@ -1809,11 +1812,11 @@
         <li class="nav-item"><a href="#sec-7"><span class="sec-num">07</span><span>Bức Tranh Đối Thủ & VGL Reality</span></a></li>
         <li class="nav-item"><a href="#sec-8"><span class="sec-num">08</span><span>Xếp Hạng 9 Mũi Nhọn Thâm Nhập</span></a></li>
         <li class="nav-item"><a href="#sec-9"><span class="sec-num">09</span><span>Sơ Đồ Trung Tâm Ra Quyết Định</span></a></li>
-        <li class="nav-item"><a href="#sec-10"><span class="sec-num">10</span><span>Kế Hoạch Tác Chiến & Pilot 90 Ngày</span></a></li>
+        <li class="nav-item"><a href="#sec-10"><span class="sec-num">10</span><span>Kiến Trúc Tích Hợp ERP / CargoWise</span></a></li>
         <li class="nav-item"><a href="#sec-11"><span class="sec-num">11</span><span>Bộ 15 Câu Hỏi Khai Phá Thực Địa</span></a></li>
         <li class="nav-item"><a href="#sec-12"><span class="sec-num">12</span><span>Quản Trị Khoảng Trống Dữ Liệu</span></a></li>
         <li class="nav-item"><a href="#sec-13"><span class="sec-num">13</span><span>Danh Mục 68 Nguồn Dẫn Chứng</span></a></li>
-        <li class="nav-item"><a href="#sec-14"><span class="sec-num">14</span><span>Bản Kiểm Soát Hành Động 5 Bước</span></a></li>
+        <li class="nav-item"><a href="#sec-14"><span class="sec-num">14</span><span>Bản Kiểm Soát Hành Động Gắn Milestone</span></a></li>
       </ul>
     </aside>
 
@@ -3047,6 +3050,7 @@ graph TD
     subgraph NguoiBaoTroVanHanh["ĐẦU MỐI BẢO TRỢ THÍ ĐIỂM (PILOT CHAMPIONS)"]
         LD[Lee Du - Source & Supply Chain Manager, Visy Retail<br/>★ MỤC TIÊU SỐ 1 CHO GÓI THÍ ĐIỂM VRS]
         MS[Mark Sloane - Logistics Manager NSW/VIC/WA, Legacy Zenexus]
+        CT[Chuong Tong - Country Manager VGL Vietnam / TP.HCM<br/>★ REGIONAL CONNECTOR - ĐIỂM TỰA ĐẦU XUẤT VN]
         WB[Wayne Boxshall - Country Manager VGL Australia]
     end
 
@@ -3258,74 +3262,63 @@ graph TD
       </section>
 
       <!-- CHƯƠNG 10 -->
+            <!-- CHƯƠNG 10 -->
       <section id="sec-10" class="report-section">
         <div class="section-tag orange">CHƯƠNG 10</div>
-        <h2 class="section-title">Kế Hoạch Tác Chiến 5 Bước & Lộ Trình 90 Ngày Thâm Nhập</h2>
+        <h2 class="section-title">Kiến Trúc Tích Hợp Hệ Thống ERP / CargoWise & Giao Diện Dữ Liệu Độc Lập</h2>
 
-        <!-- MERMAID: TIMELINE -->
+        <p style="color:var(--text-secondary); margin-bottom:1.25rem;">
+          Một trong những lý do khiến các đề xuất dịch vụ hải quan bên ngoài bị bộ phận vận hành Visy từ chối là nỗi sợ phát sinh thêm một <strong>"cổng thông tin rời rạc" (portal fatigue)</strong> buộc nhân viên Visy phải đăng nhập và tải tài liệu thủ công.
+        </p>
+
+        <p style="color:var(--text-secondary); margin-bottom:1.25rem;">
+          Để thâm nhập mượt mà, giải pháp công nghệ đề xuất phải tuân thủ kiến trúc <strong>"Headless Customs Integration" (Tích hợp Hải quan Không Cần Giao diện Mới)</strong>:
+        </p>
+
+        <!-- MERMAID: INTEGRATION ARCHITECTURE -->
         <div class="mermaid-box">
           <pre class="mermaid">
-timeline
-    title LỘ TRÌNH 5 GIAI ĐOẠN THÂM NHẬP HẢI QUAN VISY
-    Giai đoạn 1 : Tuần 1 - 4 : Kiểm toán Tuân thủ Độc lập : Soát xét 50-100 tờ khai lịch sử của VRS/CapEx
-    Giai đoạn 2 : Tuần 5 - 16 : Thí điểm Giám sát Hải quan 90 Ngày : Vận hành 1 luồng hàng nhập khẩu Châu Á của VRS
-    Giai đoạn 3 : Tuần 17 - 20 : Nghiệm thu & Lượng hóa Giá trị : Báo cáo tỷ lệ Pre-clearance, số tiền thuế tiết kiệm
-    Giai đoạn 4 : Tuần 21 - 32 : Gia nhập Danh sách Nhà thầu Dự phòng : Ký hợp đồng khung Overflow Brokerage cho VGL
-    Giai đoạn 5 : Tuần 33+ : Mở rộng Dịch vụ Liền kề : Hàng dự án CapEx, hàng không khẩn cấp, hàng sửa chữa
+graph TD
+    EXT["Hệ Thống Đại Lý Hải Quan Độc Lập"]
+    GATEWAY["Cổng Kết Nối Trung Gian Tự Động (API Gateway)<br/>Giao thức eAdaptor / Universal Customs JSON/XML"]
+    CW["CargoWise One của VGL<br/>• Cập nhật số tờ khai ICS<br/>• Trạng thái thông quan 24/7<br/>• Đính kèm C/O & Packing Decl"]
+    SAP["SAP / ERP Trung Tâm Visy<br/>• Tự động thanh toán GST/Duty<br/>• Hạch toán chi phí giá vốn hàng nhập<br/>• Đối soát tự động chứng từ DAFF"]
+
+    EXT -->|Bắn dữ liệu thông quan tự động| GATEWAY
+    GATEWAY -->|Đồng bộ hồ sơ vận tải| CW
+    GATEWAY -->|Đối soát tài chính & chi phí| SAP
           </pre>
         </div>
 
-        <h3 style="font-size:1.15rem; margin-top:2rem; margin-bottom:1rem; color:var(--color-purple);">Chi tiết 5 mức ưu tiên tác chiến</h3>
+        <h3 style="font-size:1.15rem; margin-top:2rem; margin-bottom:1rem; color:var(--color-purple);">3 Trụ Cột Của Mô Hình "Headless Customs Integration"</h3>
 
-        <div class="table-container">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th style="width:70px; text-align:center;">Ưu Tiên</th>
-                <th>Cơ Hội Khai Thác</th>
-                <th>Lý Do Tiếp Cận Ngay (Why Now)</th>
-                <th>Hướng Tiếp Cận Khác Biệt</th>
-                <th>Hành Động Cụ Thể Tiếp Theo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="background:rgba(234, 88, 12, 0.04);">
-                <td style="text-align:center;"><strong style="color:var(--color-orange-dark); font-size:1.1rem;">P1</strong></td>
-                <td><strong>Gói Thí điểm Hải quan Visy Retail Services (VRS)</strong></td>
-                <td>VRS là đơn vị bán lẻ mới sáp nhập, 78% chi tiêu mua hàng tại Châu Á/Trung Quốc; phát sinh tờ khai đều đặn hàng tuần.</td>
-                <td>Thí điểm hải quan thuần túy (Customs-only): Quản trị mã HS theo nhà máy Trung Quốc, tiền kiểm C/O ChAFTA/RCEP, cam kết thông quan trước khi tàu cập bến.</td>
-                <td>Tiếp cận Denis Conway (Procurement) và Lee Du (VRS); đề xuất thí điểm 90 ngày cho 1 tuyến hàng từ Thượng Hải/Ninh Ba.</td>
-              </tr>
-              <tr style="background:rgba(124, 58, 237, 0.04);">
-                <td style="text-align:center;"><strong style="color:var(--color-purple-dark); font-size:1.1rem;">P2</strong></td>
-                <td><strong>Hải quan Máy móc CapEx & Tư vấn TCO (Yatala / Penrith)</strong></td>
-                <td>Visy đang giải ngân gói đầu tư 2 tỷ AUD (siêu nhà máy Yatala $500M); máy móc Châu Âu (Voith, Valmet) liên tục về cảng.</td>
-                <td>Chuyên gia Kỹ thuật Thuế quan: Cam kết thẩm định mã HS Chương 84 và lập hồ sơ TCO bảo đảm loại bỏ 5% thuế nhập khẩu cơ khí.</td>
-                <td>Gửi tài liệu phân tích chuyên đề về tối ưu thuế quan máy móc Chương 84 trực tiếp cho Denis Conway và Brant Crowley.</td>
-              </tr>
-              <tr>
-                <td style="text-align:center;"><strong style="color:var(--color-orange-dark); font-size:1.1rem;">P3</strong></td>
-                <td><strong>Kênh Thông quan Hỏa tốc MRO & Tái nhập Yatala</strong></td>
-                <td>Dừng lò nung thủy tinh hay máy cán giấy Tumut gây tổn thất hàng trăm nghìn AUD; đầu đột lon Yatala định kỳ gửi ra nước ngoài sửa chữa.</td>
-                <td>Dịch vụ Phản ứng Nhanh Phụ tùng MRO: Cam kết SLA thông quan hàng không 4-6 giờ tại SYD/MEL; quy trình tạm xuất - tái nhập chuẩn xác theo số sê-ri.</td>
-                <td>Gửi thư chào dịch vụ thử nghiệm (Proof of Concept) cho một lô phụ tùng khẩn cấp đến Quản lý Kho vận & Bảo trì tại Tumut và Yatala.</td>
-              </tr>
-              <tr>
-                <td style="text-align:center;"><strong style="color:var(--color-purple-dark); font-size:1.1rem;">P4</strong></td>
-                <td><strong>Xử lý Kiểm dịch DAFF & Quản trị Rủi ro BMSB Cửa ngõ</strong></td>
-                <td>Các lô máy móc nặng nhập khẩu đối mặt với nguy cơ đình trệ kiểm dịch trong mùa BMSB (tháng 9 đến tháng 4), gây phát sinh phí lưu bãi cảng lớn.</td>
-                <td>Quy trình Tiền kiểm dịch Cửa ngõ: Thẩm định chứng thư hun trùng trước khi xếp tàu và điều phối thông quan qua bãi kiểm dịch ngoại quan chuẩn hóa.</td>
-                <td>Xây dựng bản hướng dẫn kỹ thuật phòng ngừa rủi ro BMSB cho thiết bị công nghiệp nặng gửi đến Ulf Barnard và Brant Crowley.</td>
-              </tr>
-              <tr>
-                <td style="text-align:center;"><strong style="color:var(--text-secondary); font-size:1.1rem;">P5</strong></td>
-                <td><strong>Thuê ngoài San tải Dữ liệu CargoWise (BCP / Overflow)</strong></td>
-                <td>Khối lượng tờ khai tăng nhanh và VGL mở rộng quốc tế tạo áp lực quá tải lên đội ngũ chứng từ nội bộ của Visy.</td>
-                <td>Đối tác Dự phòng Năng lực (BCP Partner): Đội ngũ kỹ thuật viên am hiểu CargoWise hỗ trợ kiểm tra chứng từ và nhập dữ liệu tờ khai từ xa theo sản lượng.</td>
-                <td>Tiếp cận Wayne Boxshall và Brant Crowley để đề xuất cơ chế san tải dữ liệu tờ khai phụ trợ trong mùa cao điểm.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
+          <div style="background:#ffffff; border:1px solid var(--border-subtle); border-top:4px solid var(--color-purple); border-radius:var(--radius-md); padding:1.25rem; box-shadow:var(--shadow-sm);">
+            <div style="font-weight:800; font-size:0.95rem; color:var(--color-purple-dark); margin-bottom:0.5rem;">
+              1. Giao Tiếp Hai Chiều Chuẩn eAdaptor
+            </div>
+            <p style="font-size:0.84rem; color:var(--text-secondary); line-height:1.5;">
+              Hệ thống của broker bên ngoài kết nối thẳng vào môi trường CargoWise One của VGL thông qua chuẩn Universal Customs XML / eAdaptor. Mọi mốc trạng thái (Milestones: Đã nộp tờ khai, Thông quan thành công, Kiểm dịch DAFF yêu cầu kiểm tra, Đã nộp thuế, Lệnh giao hàng DO) được cập nhật thẳng vào hồ sơ nội bộ của Visy.
+            </p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid var(--border-subtle); border-top:4px solid var(--color-orange); border-radius:var(--radius-md); padding:1.25rem; box-shadow:var(--shadow-sm);">
+            <div style="font-weight:800; font-size:0.95rem; color:var(--color-orange-dark); margin-bottom:0.5rem;">
+              2. Không Làm Xáo Trộn Quy Trình Tài Chính
+            </div>
+            <p style="font-size:0.84rem; color:var(--text-secondary); line-height:1.5;">
+              Dữ liệu thuế nhập khẩu và thuế GST được đối soát tự động với mã tài khoản kế toán trong SAP của Visy, bảo đảm bộ phận kế toán thuế không phải nhập liệu lại bằng tay. Tự động hóa thanh toán và hạch toán giá vốn hàng bán lẻ.
+            </p>
+          </div>
+
+          <div style="background:#ffffff; border:1px solid var(--border-subtle); border-top:4px solid var(--color-purple); border-radius:var(--radius-md); padding:1.25rem; box-shadow:var(--shadow-sm);">
+            <div style="font-weight:800; font-size:0.95rem; color:var(--color-purple-dark); margin-bottom:0.5rem;">
+              3. Phân Quyền & Bảo Mật Dữ Liệu Độc Lập
+            </div>
+            <p style="font-size:0.84rem; color:var(--text-secondary); line-height:1.5;">
+              Dữ liệu tờ khai của Visy Retail Services được phân vùng độc lập, tuyệt đối không để lộ thông tin giá mua hoặc danh sách khách hàng của các đơn vị khác trong tập đoàn. Đáp ứng trọn vẹn quy chuẩn an ninh mạng của Ban Tuân thủ Toàn cầu.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -4043,63 +4036,110 @@ timeline
       <!-- CHƯƠNG 14 -->
       <section id="sec-14" class="report-section">
         <div class="section-tag orange">CHƯƠNG 14</div>
-        <h2 class="section-title">Bản Kiểm Soát Hành Động Thâm Nhập Dành Cho Đội Ngũ Thương Mại</h2>
+        <h2 class="section-title">Bản Kiểm Soát Hành Động Thâm Nhập Gắn Với Milestone Thực Tế</h2>
 
         <p style="color:var(--text-secondary); margin-bottom:1.25rem;">
-          Bảng kiểm soát tiến độ tương tác thực địa (Interactive Action Checklist). Trạng thái được tự động lưu trên trình duyệt của bạn:
+          Thay vì áp dụng mốc thời gian trừu tượng, kế hoạch tác chiến 5 bước được đồng bộ hóa trực tiếp với <strong>Chu kỳ Mùa vụ Pháp lý & Sự kiện Thương mại Thực tế của Ngành Logistics Úc</strong>:
         </p>
 
-        <div class="checklist-card">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
-            <div style="font-size:0.85rem; font-weight:700; color:var(--color-purple); text-transform:uppercase;">Tiến Độ Triển Khai Thực Địa</div>
-            <div id="checklistCount" style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700; color:var(--color-purple);">0 / 5 Hoàn thành (0%)</div>
-          </div>
+        <!-- MILESTONE CYCLE TABLE -->
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width:70px; text-align:center;">Bước</th>
+                <th>Hành Động Cụ Thể</th>
+                <th>Đầu Mối Đối Tượng</th>
+                <th>Cột Mốc Gắn Thực Địa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background:rgba(124, 58, 237, 0.04);">
+                <td style="text-align:center; font-weight:800; color:var(--color-purple);">1</td>
+                <td>Gửi tài liệu phân tích chuyên đề về tối ưu Lệnh Giảm Thuế (TCO) máy móc CapEx Yatala và giải pháp tiền kiểm dịch BMSB</td>
+                <td><strong>Denis Conway</strong> (Group Procurement) & <strong>Brant Crowley</strong> (VGL)</td>
+                <td><span class="meta-badge purple" style="font-size:0.75rem;">Tháng 8 - 9</span><br><small style="color:var(--text-muted);">Trước mùa BMSB 01/09</small></td>
+              </tr>
+              <tr style="background:rgba(234, 88, 12, 0.04);">
+                <td style="text-align:center; font-weight:800; color:var(--color-orange-dark);">2</td>
+                <td>Tiếp cận thảo luận chuyên sâu về quy trình tiền kiểm tra C/O ChAFTA/RCEP cho hàng bán lẻ phục vụ mùa Giáng sinh</td>
+                <td><strong>Lee Du</strong> & <strong>Mark Sloane</strong> (Visy Retail Services)</td>
+                <td><span class="meta-badge orange" style="font-size:0.75rem;">Tháng 9 - 10</span><br><small style="color:var(--text-muted);">Mùa cao điểm Retail Bunnings</small></td>
+              </tr>
+              <tr style="background:rgba(5, 150, 105, 0.04);">
+                <td style="text-align:center; font-weight:800; color:var(--color-emerald);">3</td>
+                <td>Tiếp cận VGL Việt Nam tại TP.HCM để hỗ trợ kiểm soát chứng từ đầu xuất từ VN/Châu Á sang Úc, chứng minh năng lực thực địa</td>
+                <td><strong>Chuong Tong</strong> (Country Manager VGL) & <strong>Ulf Barnard</strong> (VGL AU)</td>
+                <td><span class="meta-badge success" style="font-size:0.75rem;">Tháng 10 - 11</span><br><small style="color:var(--text-muted);">Đón sóng hàng xuất khẩu cuối năm</small></td>
+              </tr>
+              <tr style="background:rgba(234, 88, 12, 0.04);">
+                <td style="text-align:center; font-weight:800; color:var(--color-orange-dark);">4</td>
+                <td>Ký thỏa thuận NDA và triển khai Gói Thí điểm Giám sát Hải quan 90 Ngày cho 1 luồng hàng nhập khẩu bán lẻ từ Châu Á</td>
+                <td><strong>Denis Conway</strong> (Procurement) & <strong>VRS Team</strong></td>
+                <td><span class="meta-badge orange" style="font-size:0.75rem;">Tháng 11 - 01</span><br><small style="color:var(--text-muted);">Thử lửa mùa lễ hội lớn</small></td>
+              </tr>
+              <tr style="background:rgba(124, 58, 237, 0.04);">
+                <td style="text-align:center; font-weight:800; color:var(--color-purple);">5</td>
+                <td>Báo cáo kết quả tỷ lệ Pre-clearance 100%, đề xuất cơ chế Hoàn thuế Soda Ash và hợp đồng Overflow Brokerage cho VGL</td>
+                <td><strong>Brian Thorpe</strong> & <strong>Denis Conway</strong> (Procurement / APSA)</td>
+                <td><span class="meta-badge purple" style="font-size:0.75rem;">Tháng 2 - 3</span><br><small style="color:var(--text-muted);">Trước kỳ duyệt Tender thường niên</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- TACTICAL ACTION CHECKLIST -->
+        <h3 style="font-size:1.15rem; margin-top:2rem; margin-bottom:0.75rem; color:var(--color-purple);">Bản Kiểm Soát Tiến Độ Thực Địa (Checklist Tác Chiến 5 Bước)</h3>
+        
+        <div class="checklist-box">
           <div class="checklist-progress-bar">
-            <div class="checklist-progress-fill" id="checklistProgress"></div>
+            <div class="progress-fill" id="checklistProgress" style="width:0%;"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <div style="font-weight:700; font-size:0.92rem; color:var(--color-purple-dark);">TIẾN ĐỘ THỰC ĐỊA 5 BƯỚC THÂM NHẬP</div>
+            <div id="checklistCount" style="font-size:0.8rem; font-weight:700; color:var(--text-muted);">0 / 5 Hoàn thành (0%)</div>
           </div>
 
           <div class="checklist-item">
             <input type="checkbox" id="chk1" onchange="updateChecklist()">
             <label for="chk1" class="checklist-label">
-              <strong>Bước 1 (Ngày 1–7):</strong> Gửi tài liệu phân tích chuyên đề về tối ưu Lệnh Giảm Thuế (TCO) máy móc CapEx và đề xuất Kiểm toán Tuân thủ Độc lập đến <strong>Denis Conway (Group Procurement) & Brant Crowley (VGL)</strong>.
+              <strong>Bước 1 (Tháng 8 - 9):</strong> Soạn thảo và gửi tài liệu kỹ thuật về TCO máy móc CapEx Yatala & kiểm dịch BMSB trước 01/09 cho Denis Conway & Brant Crowley.
             </label>
           </div>
-
           <div class="checklist-item">
             <input type="checkbox" id="chk2" onchange="updateChecklist()">
             <label for="chk2" class="checklist-label">
-              <strong>Bước 2 (Ngày 8–15):</strong> Tiếp cận thảo luận chuyên sâu về quy trình tiền kiểm tra chứng từ C/O ChAFTA và quản lý mã HS cho hàng kim khí Châu Á với <strong>Lee Du & Mark Sloane (Visy Retail Services)</strong>.
+              <strong>Bước 2 (Tháng 9 - 10):</strong> Gặp Lee Du & Mark Sloane để trao đổi quy trình tiền kiểm C/O ChAFTA/RCEP cho luồng hàng kim khí/thùng carton phục vụ cao điểm Bunnings.
             </label>
           </div>
-
           <div class="checklist-item">
             <input type="checkbox" id="chk3" onchange="updateChecklist()">
             <label for="chk3" class="checklist-label">
-              <strong>Bước 3 (Ngày 16–25):</strong> Giới thiệu giải pháp Quy trình Thông quan Sửa chữa (Repair-Return Workflow) cho đầu đột lon Yatala & phụ tùng khẩn cấp 24/7 đến <strong>Brant Crowley (National Customs) & Ban Vận hành Yatala</strong>.
+              <strong>Bước 3 (Tháng 10 - 11):</strong> Kết nối Chuong Tong (Country Manager VGL Việt Nam tại TP.HCM) và Ulf Barnard để chào dịch vụ kiểm định chứng từ đầu xuất khẩu đi Úc.
             </label>
           </div>
-
           <div class="checklist-item">
             <input type="checkbox" id="chk4" onchange="updateChecklist()">
             <label for="chk4" class="checklist-label">
-              <strong>Bước 4 (Ngày 26–45):</strong> Ký kết thỏa thuận NDA và triển khai Gói Thí Điểm Giám Sát Hải Quan 90 Ngày cho 1 luồng hàng nhập khẩu bán lẻ Châu Á cùng <strong>Denis Conway (Procurement) & VRS</strong>.
+              <strong>Bước 4 (Tháng 11 - 01):</strong> Ký kết thỏa thuận NDA và triển khai Gói Thí điểm 90 Ngày cho 1 luồng hàng nhập khẩu Châu Á của Visy Retail Services.
             </label>
           </div>
-
           <div class="checklist-item">
             <input type="checkbox" id="chk5" onchange="updateChecklist()">
             <label for="chk5" class="checklist-label">
-              <strong>Bước 5 (Ngày 90–95):</strong> Báo cáo kết quả tỷ lệ Pre-clearance 100% và đề xuất hợp đồng Overflow Brokerage chính thức cho <strong>Ban Lãnh đạo Visy, VGL & Procurement</strong>.
+              <strong>Bước 5 (Tháng 2 - 3):</strong> Trình bày báo cáo nghiệm thu kết quả Pre-clearance 100%, đề xuất cơ chế hoàn thuế Soda Ash và ký hợp đồng Overflow Brokerage trước kỳ duyệt thầu.
             </label>
           </div>
         </div>
 
-        <div style="background:var(--bg-card); border:1px solid var(--border-strong); border-radius:var(--radius-lg); padding:1.75rem; text-align:center; margin-top:2rem; box-shadow:var(--shadow-sm); border-top:4px solid var(--color-purple);">
-          <div style="font-size:1.15rem; font-weight:800; color:var(--color-purple-dark); margin-bottom:0.5rem;">
-            NGUYÊN TẮC CỐT TỬ GHI NHỚ CUỐI CÙNG
-          </div>
-          <p style="font-size:0.95rem; color:var(--text-secondary); max-width:850px; margin:0 auto; line-height:1.65;">
-            Đừng cố gắng trở thành người thay thế VGL. Hãy trở thành <strong>chiếc đai an toàn chuyên môn và nguồn lực dự phòng tin cậy nhất</strong> mà VGL và Ban Mua sắm Visy bắt buộc phải dựa vào khi đối mặt với rủi ro pháp lý hải quan khắt khe và áp lực mở rộng chuỗi cung ứng toàn cầu.
+        <!-- CLOSING GOLDEN RULE -->
+        <div style="background:linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(234, 88, 12, 0.08)); border:2px solid var(--color-purple-border); border-radius:var(--radius-md); padding:1.5rem; margin-top:2rem;">
+          <h4 style="font-size:1.05rem; font-weight:800; color:var(--color-purple-dark); margin-bottom:0.6rem; display:flex; align-items:center; gap:0.5rem;">
+            <span>🛡️</span>
+            <span>NGUYÊN TẮC CỐT TỬ GHI NHỚ CUỐI CÙNG</span>
+          </h4>
+          <p style="font-size:0.95rem; font-style:italic; color:var(--text-primary); line-height:1.6; font-weight:600;">
+            "Đừng cố gắng trở thành người thay thế VGL. Hãy trở thành chiếc đai an toàn chuyên môn và nguồn lực dự phòng tin cậy nhất mà VGL và Ban Mua sắm Visy bắt buộc phải dựa vào khi đối mặt với rủi ro pháp lý hải quan và áp lực mở rộng chuỗi cung ứng toàn cầu."
           </p>
         </div>
       </section>
