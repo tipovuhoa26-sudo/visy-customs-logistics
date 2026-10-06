@@ -1717,6 +1717,776 @@
     }
   </style>
     
+
+    /* ==========================================================================
+       EXECUTIVE VISUAL DIAGRAMS & REFINED BRAND HEADER STYLING
+       ========================================================================== */
+    
+    /* Header Brand Title Group Refinement */
+    .brand-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .brand-title-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .brand-title-text {
+      font-family: var(--font-display);
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+    }
+    .executive-pill-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(124, 58, 237, 0.08);
+      color: var(--color-purple);
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      border-radius: 9999px;
+      padding: 0.12rem 0.55rem;
+    }
+    .confidential-pill-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--color-orange);
+      border: 1px solid rgba(234, 88, 12, 0.25);
+      border-radius: 9999px;
+      padding: 0.12rem 0.55rem;
+    }
+    .brand-subtitle-row {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.01em;
+    }
+
+    /* Common Visual Diagram Card Wrapper */
+    .visual-diagram-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin: 1.75rem 0 2rem 0;
+      box-shadow: 0 4px 20px -2px rgba(124, 58, 237, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+      position: relative;
+      overflow: hidden;
+    }
+    .visual-diagram-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-purple), var(--color-orange));
+    }
+    .diagram-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .diagram-title-box {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .diagram-icon {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: var(--bg-surface-elevated);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+    .diagram-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-purple-dark);
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+    .diagram-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+      font-weight: 500;
+    }
+    .diagram-bottom-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(234, 88, 12, 0.05));
+      border: 1px solid var(--color-purple-border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .diagram-bottom-banner .banner-icon {
+      font-size: 1.25rem;
+      line-height: 1;
+      margin-top: 0.1rem;
+    }
+    .diagram-bottom-banner .banner-text {
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      line-height: 1.55;
+    }
+
+    /* --- DIAGRAM 1: CIRCULAR ECONOMY STEPS GRID --- */
+    .circular-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      position: relative;
+    }
+    .stream-step-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      position: relative;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .stream-step-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-purple);
+    }
+    .stream-step-card.highlight-target {
+      background: linear-gradient(180deg, #ffffff 0%, rgba(234, 88, 12, 0.04) 100%);
+      border: 2px solid var(--color-orange);
+    }
+    .step-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .step-num-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 9999px;
+      background: var(--color-purple-bg);
+      color: var(--color-purple);
+      font-weight: 800;
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+    }
+    .step-num-badge.gold {
+      background: var(--color-orange-bg);
+      color: var(--color-orange);
+    }
+    .step-tag-pill {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      background: var(--bg-surface-elevated);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
+    }
+    .step-tag-pill.orange {
+      color: var(--color-orange-dark);
+      background: rgba(234, 88, 12, 0.1);
+    }
+    .step-card-heading {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+    .step-metric-highlight {
+      font-size: 0.85rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--color-purple);
+      margin-bottom: 0.6rem;
+    }
+    .step-metric-highlight.orange {
+      color: var(--color-orange);
+    }
+    .step-card-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    .step-flow-nodes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: auto;
+    }
+    .node-pill {
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: var(--bg-surface-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.15rem 0.45rem;
+    }
+    .node-pill.accent {
+      background: rgba(234, 88, 12, 0.08);
+      color: var(--color-orange-dark);
+      border-color: rgba(234, 88, 12, 0.25);
+    }
+    .stream-arrow-indicator {
+      display: none; /* hidden on grid, auto-flows cleanly */
+    }
+
+    /* --- DIAGRAM 2: MAKE-VS-BUY GAP MATRIX --- */
+    .gap-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.25rem;
+    }
+    .gap-col {
+      background: #ffffff;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+    .gap-col.col-vgl-strength {
+      border-top: 4px solid var(--color-purple);
+    }
+    .gap-col.col-vgl-weakness {
+      border-top: 4px solid var(--color-orange);
+    }
+    .gap-col.col-sunext-opp {
+      border-top: 4px solid #10b981;
+      background: linear-gradient(180deg, #ffffff 0%, rgba(16, 185, 129, 0.03) 100%);
+    }
+    .gap-col-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .gap-col-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .gap-col-icon {
+      font-size: 1.25rem;
+    }
+    .gap-col-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .gap-col-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
+      align-self: flex-start;
+    }
+    .gap-col-badge.gray { background: var(--bg-surface-elevated); color: var(--text-muted); }
+    .gap-col-badge.orange { background: rgba(234, 88, 12, 0.1); color: var(--color-orange-dark); }
+    .gap-col-badge.purple { background: rgba(16, 185, 129, 0.1); color: #059669; }
+    .gap-col-intro {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.85rem;
+      font-style: italic;
+    }
+    .gap-col-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+    .gap-col-list li strong { color: var(--text-primary); }
+    .gap-col-footer {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.65rem 0.85rem;
+      border-radius: var(--radius-sm);
+      margin-top: auto;
+    }
+    .gap-col-footer.safe { background: rgba(124, 58, 237, 0.06); color: var(--color-purple-dark); }
+    .gap-col-footer.warn { background: rgba(234, 88, 12, 0.08); color: var(--color-orange-dark); }
+    .gap-col-footer.highlight { background: rgba(16, 185, 129, 0.08); color: #047857; }
+
+    /* --- DIAGRAM 3: BUYING CENTRE HIERARCHY MAP --- */
+    .org-hierarchy-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .org-tier-row {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .org-tier-row.highlight-target-row {
+      background: linear-gradient(135deg, rgba(234, 88, 12, 0.03), rgba(124, 58, 237, 0.03));
+      border: 2px solid var(--color-orange);
+    }
+    .tier-label-box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .tier-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 800;
+      background: var(--color-purple-bg);
+      color: var(--color-purple);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
+    }
+    .tier-badge.orange { background: var(--color-orange-bg); color: var(--color-orange); }
+    .tier-badge.purple { background: var(--color-purple-bg); color: var(--color-purple); }
+    .tier-badge.green { background: rgba(16, 185, 129, 0.1); color: #059669; }
+    .tier-role {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+    }
+    .tier-role.orange { color: var(--color-orange-dark); }
+    .tier-role.purple { color: var(--color-purple-dark); }
+    .tier-role.green { color: #047857; }
+    .tier-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .exec-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .exec-card.primary-focus {
+      border: 2px solid var(--color-orange);
+      background: #ffffff;
+    }
+    .exec-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .exec-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, var(--color-purple), var(--color-orange));
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .exec-avatar.orange { background: linear-gradient(135deg, #ea580c, #f97316); }
+    .exec-avatar.purple { background: linear-gradient(135deg, #7c3aed, #9333ea); }
+    .exec-avatar.green { background: linear-gradient(135deg, #059669, #10b981); }
+    .exec-name {
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .exec-title {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+    .hot-badge {
+      font-size: 0.62rem;
+      font-weight: 800;
+      background: rgba(234, 88, 12, 0.12);
+      color: var(--color-orange);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+    }
+    .hot-badge.green { background: rgba(5, 150, 105, 0.12); color: #059669; }
+    .hot-badge.vn { background: rgba(225, 29, 72, 0.12); color: #e11d48; }
+    .exec-card-duty {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .tier-connector-line {
+      display: flex;
+      justify-content: center;
+      padding: 0.25rem 0;
+    }
+    .connector-arrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-purple);
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--color-purple-border);
+      padding: 0.2rem 0.85rem;
+      border-radius: 9999px;
+    }
+    .org-dual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.25rem;
+    }
+    .org-col-tier {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .exec-cards-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    /* --- DIAGRAM 4: HEADLESS CUSTOMS ARCHITECTURE --- */
+    .headless-arch-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .arch-layer {
+      width: 100%;
+    }
+    .arch-box {
+      background: #ffffff;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .arch-box.external-broker {
+      border-left: 5px solid var(--color-purple);
+    }
+    .arch-box-badge {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--color-purple);
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+    .arch-box-badge.purple { color: var(--color-purple); }
+    .arch-box-badge.orange { color: var(--color-orange-dark); }
+    .arch-box-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+    .arch-box-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+    .arch-data-pipe {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    .pipe-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-purple), var(--color-orange));
+    }
+    .pipe-label {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--color-purple-border);
+      border-radius: 9999px;
+      padding: 0.3rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-purple-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .pipe-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background: var(--color-orange);
+      box-shadow: 0 0 8px var(--color-orange);
+    }
+    .arch-box.gateway-hub {
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(234, 88, 12, 0.05));
+      border: 2px solid var(--color-purple-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .gateway-icon {
+      font-size: 2rem;
+      color: var(--color-orange);
+    }
+    .gateway-info {
+      flex: 1;
+      min-width: 250px;
+    }
+    .gateway-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--color-purple-dark);
+      letter-spacing: -0.01em;
+    }
+    .gateway-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 0.2rem;
+    }
+    .gateway-badges {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .gateway-pill {
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      color: var(--color-purple);
+    }
+    .arch-split-pipes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      text-align: center;
+    }
+    .split-branch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    .branch-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .branch-arrow {
+      color: var(--color-purple);
+      font-size: 0.85rem;
+    }
+    .bottom-layer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .arch-box.internal-cw {
+      border-top: 4px solid var(--color-purple);
+    }
+    .arch-box.internal-sap {
+      border-top: 4px solid var(--color-orange);
+    }
+    .arch-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .arch-feature-list li strong { color: var(--text-primary); }
+
+    /* --- DIAGRAM 5: BPO ORIGIN PRE-CLEARANCE PIPELINE --- */
+    .bpo-pipeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.25rem;
+      align-items: stretch;
+    }
+    .pipeline-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+    .pipeline-card.highlight-hub {
+      border: 2px solid var(--color-purple);
+      background: linear-gradient(180deg, #ffffff 0%, rgba(124, 58, 237, 0.03) 100%);
+    }
+    .pipeline-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.65rem;
+    }
+    .pipeline-step-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 800;
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm);
+    }
+    .pipeline-step-badge.purple { background: var(--color-purple-bg); color: var(--color-purple); }
+    .pipeline-step-badge.green { background: rgba(16, 185, 129, 0.1); color: #059669; }
+    .pipeline-loc-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .pipeline-loc-badge.purple { color: var(--color-purple); }
+    .pipeline-loc-badge.green { color: #059669; }
+    .pipeline-heading {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+    .pipeline-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+    }
+    .pipeline-action-box {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.45;
+    }
+    .pipeline-action-box strong { color: var(--text-primary); display: block; margin-bottom: 0.25rem; }
+    .pipeline-action-box p { margin: 0; }
+    .hub-tasks-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    .hub-task-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+    .task-check {
+      color: var(--color-purple);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    .dest-results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    .dest-result-item {
+      font-size: 0.8rem;
+      line-height: 1.45;
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+    }
+    .dest-result-item.success {
+      background: rgba(16, 185, 129, 0.08);
+      color: #065f46;
+      border-left: 3px solid #10b981;
+    }
+    .dest-result-item strong { display: block; margin-bottom: 0.15rem; }
+    .pipeline-timing-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 0.4rem 0.65rem;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      margin-top: auto;
+      text-align: center;
+    }
+    .pipeline-timing-tag.purple {
+      background: rgba(124, 58, 237, 0.08);
+      color: var(--color-purple-dark);
+    }
+    .pipeline-timing-tag.green {
+      background: rgba(16, 185, 129, 0.1);
+      color: #047857;
+    }
+    .pipeline-connector {
+      display: none;
+    }
+    
 </style>
 </head>
 <body>
@@ -1733,8 +2503,14 @@
         <span>VISY</span>
       </div>
       <div class="brand-title-group">
-        <h1>CUSTOMS & LOGISTICS STRATEGY <span class="meta-badge orange">CONFIDENTIAL</span></h1>
-        <div class="brand-subtitle">Executive Strategic Dossier • Australia & APAC Market Penetration Map</div>
+        <div class="brand-title-row">
+          <span class="brand-title-text">VISY STRATEGIC INTELLIGENCE</span>
+          <span class="executive-pill-badge">CLIENT-ONLY</span>
+          <span class="confidential-pill-badge">CONFIDENTIAL</span>
+        </div>
+        <div class="brand-subtitle-row">
+          <span>Chiến Lược Hải Quan & Logistics Úc • Australia & APAC Market Penetration Map</span>
+        </div>
       </div>
     </div>
 
@@ -1834,10 +2610,20 @@
           <span class="meta-badge success">CHUẨN EPISTEMIC: 4 CẤP ĐỘ NHẬN THỨC</span>
         </div>
         
-        <h1 class="hero-title">VISY — BÁO CÁO TÌNH BÁO TÀI KHOẢN CHIẾN LƯỢC</h1>
+        <h1 class="hero-title">Visy — Báo Cáo Tình Báo Chiến Lược: Hải Quan & Logistics Úc</h1>
         <p class="hero-lead">
-          Cơ Hội Khai Báo Hải Quan & Dịch Vụ Logistics Quốc Tế (Australia & APAC): Phân tích thực chứng rào cản độc quyền nội bộ Visy Global Logistics (VGL), bản đồ thâm nhập hàng bán lẻ Visy Retail Services (VRS), phụ tùng dự án CapEx 2 tỷ AUD, và chiến lược hợp tác không đối đầu.
+          Bản Đồ Thâm Nhập Tài Khoản, Phân Tích Thực Địa Chuỗi Cung Ứng & Kiến Trúc Tác Nhân AI Dành Cho Tập Đoàn Visy Industries (Australia & APAC).
         </p>
+
+        <!-- EXECUTIVE QUOTE CALLOUT -->
+        <div style="background:linear-gradient(135deg, rgba(124, 58, 237, 0.04), rgba(234, 88, 12, 0.04)); border-left:4px solid var(--color-purple); border-radius:var(--radius-sm); padding:1rem 1.25rem; margin:1.25rem 0 1.75rem 0;">
+          <p style="font-size:0.92rem; font-style:italic; color:var(--text-primary); line-height:1.6; margin:0; font-weight:600;">
+            "Đừng cố gắng thay thế VGL. Hãy trở thành chiếc đai an toàn chuyên môn và nguồn lực dự phòng tin cậy nhất mà VGL và Ban Mua sắm Visy bắt buộc phải dựa vào khi đối mặt với rủi ro pháp lý hải quan và áp lực mở rộng chuỗi cung ứng toàn cầu."
+          </p>
+          <div style="text-align:right; font-size:0.75rem; font-weight:800; color:var(--color-purple); margin-top:0.35rem; letter-spacing:0.04em;">
+            — NGUYÊN TẮC CỐT TỬ TIẾP CẬN TÀI KHOẢN SUNEXT
+          </div>
+        </div>
 
         <!-- KPI METRICS GRID -->
         <div class="metrics-grid">
@@ -2235,42 +3021,94 @@
           Visy là tập đoàn tư nhân thuộc sở hữu gia đình Pratt (Anthony Pratt làm Chủ tịch), thành lập từ năm 1948 tại Melbourne. Doanh nghiệp vận hành hệ sinh thái kinh tế tuần hoàn khép kín (closed-loop circular economy) tích hợp theo chiều dọc lớn nhất Châu Đại Dương:
         </p>
 
-        <!-- MERMAID: CIRCULAR ECONOMY -->
-        <div class="mermaid-box">
-          <pre class="mermaid">
-flowchart TD
-    subgraph ThuGom["1. THU GOM & TÁI CHẾ NỘI ĐỊA"]
-        A1[Hệ thống thu gom rác tái chế Kerbside] --> A2[Trung tâm phân loại MRF - >1,7 triệu tấn/năm]
-        A2 --> A3[Thu hồi Giấy vụn, Nhựa PET/HDPE, Thủy tinh, Vỏ lon nhôm]
-    end
+        <!-- BESPOKE VISUAL: CIRCULAR ECONOMY -->
+        <div class="visual-diagram-card">
+          <div class="diagram-header">
+            <div class="diagram-title-box">
+              <span class="diagram-icon">🔄</span>
+              <div>
+                <h4 class="diagram-title">BẢN ĐỒ 4 TRỤ CỘT CHUỖI CUNG ỨNG TUẦN HOÀN KHÉP KÍN & ĐIỂM CHẠM HẢI QUAN</h4>
+                <div class="diagram-subtitle">Closed-Loop Circular Economy Model • Tích Hợp Chiều Dọc & Phơi Nhiễm Quốc Tế</div>
+              </div>
+            </div>
+            <span class="meta-badge purple">VISY CLOSED-LOOP ECOSYSTEM</span>
+          </div>
 
-    subgraph SanXuat["2. TỔ HỢP TÁI CHẾ & CHẾ TẠO CÔNG NGHIỆP"]
-        B1[Tumut Kraft Mill: >680k tấn/năm] 
-        B2[8 Máy xeo giấy tái chế: 760k tấn/năm Coolaroo, Gibson Island]
-        B3[6 Nhà máy thủy tinh: 3 tỷ chai/năm Penrith, Yatala, Spotswood]
-        B4[9 Nhà máy nhựa & Phôi thực phẩm rPET/rHDPE Smithfield, Somerton]
-        B5[Nhà máy sản xuất lon nhôm & đồ hộp Smithfield, Yatala]
-        B6[Hệ thống bao bì carton sóng & xưởng dập hộp Hemmant, Reservoir]
-    end
+          <div class="circular-steps-grid">
+            <!-- Step 1 -->
+            <div class="stream-step-card step-1">
+              <div class="step-card-top">
+                <span class="step-num-badge">01</span>
+                <span class="step-tag-pill">THU GOM & TÁI CHẾ</span>
+              </div>
+              <h5 class="step-card-heading">Hệ Thống Kerbside & MRF</h5>
+              <div class="step-metric-highlight">>1,7 Triệu Tấn / Năm</div>
+              <p class="step-card-desc">Hợp đồng thu gom rác tái chế với 130+ hội đồng địa phương; vận hành 8 trung tâm phân loại MRF công nghệ cao.</p>
+              <div class="step-flow-nodes">
+                <span class="node-pill">Giấy vụn OCC/SOP</span>
+                <span class="node-pill">Nhựa PET/HDPE</span>
+                <span class="node-pill">Thủy tinh tái chế</span>
+                <span class="node-pill">Phoi & Vỏ lon nhôm</span>
+              </div>
+            </div>
 
-    subgraph PhanPhoi["3. BÁN LẺ & DỊCH VỤ THƯƠNG MẠI"]
-        C1[Visy Retail Services - Phân phối Bunnings, HomeBase]
-        C2[Visy Global Trading - Thương mại quốc tế >300k tấn]
-        C3[Visy Automation & Packsize - Thiết bị đóng gói tự động]
-    end
+            <!-- Step 2 -->
+            <div class="stream-step-card step-2">
+              <div class="step-card-top">
+                <span class="step-num-badge">02</span>
+                <span class="step-tag-pill">CHẾ BIẾN & SẢN XUẤT</span>
+              </div>
+              <h5 class="step-card-heading">Tổ Hợp Nhà Máy Công Nghiệp</h5>
+              <div class="step-metric-highlight">>680k Tấn Tumut VP9</div>
+              <p class="step-card-desc">Các siêu nhà máy sản xuất giấy kraft, lò nấu thủy tinh oxy-fuel và dây chuyền cán lon đồ uống chạy 24/7.</p>
+              <div class="step-flow-nodes">
+                <span class="node-pill">Giấy Kraft Tumut VP9</span>
+                <span class="node-pill">Thủy Tinh Penrith & Yatala ($500M)</span>
+                <span class="node-pill">Lon Nhôm Smithfield</span>
+                <span class="node-pill">Nhựa Somerton</span>
+              </div>
+            </div>
 
-    subgraph LogisticsNoiBo["4. HỆ THỐNG ĐIỀU PHỐI LOGISTICS NỘI BỘ (VGL)"]
-        D1[Visy Global Logistics - 7 quốc gia, 160+ điểm vận hành]
-        D2[VISY LOGISTICS PTY LTD - Đại lý hải quan cấp phép ABF]
-        D3[RiFL Wagga Wagga - Ga cạn liên phương thức độc quyền]
-        D4[Hệ thống kho tự động E80 LGVs: Truganina, Epping, Yatala]
-    end
+            <!-- Step 3 -->
+            <div class="stream-step-card step-3">
+              <div class="step-card-top">
+                <span class="step-num-badge">03</span>
+                <span class="step-tag-pill">TIÊU THỤ & PHÂN PHỐI</span>
+              </div>
+              <h5 class="step-card-heading">Kênh Bán Lẻ & FMCG Khép Kín</h5>
+              <div class="step-metric-highlight">Bunnings / Coles / F&B</div>
+              <p class="step-card-desc">Cung ứng bao bì cho các tập đoàn thực phẩm đồ uống toàn cầu và phân phối chuỗi kim khí gia dụng.</p>
+              <div class="step-flow-nodes">
+                <span class="node-pill">Chuỗi Bán Lẻ Bunnings</span>
+                <span class="node-pill">Tập Đoàn F&B Đồ Uống</span>
+                <span class="node-pill">Visy Retail Services (Zenexus)</span>
+              </div>
+            </div>
 
-    ThuGom --> SanXuat
-    SanXuat --> PhanPhoi
-    SanXuat <--> LogisticsNoiBo
-    PhanPhoi <--> LogisticsNoiBo
-          </pre>
+            <!-- Step 4 (Key Opportunity) -->
+            <div class="stream-step-card step-4 highlight-target">
+              <div class="step-card-top">
+                <span class="step-num-badge gold">04</span>
+                <span class="step-tag-pill orange">XUẤT NHẬP KHẨU & HẢI QUAN</span>
+              </div>
+              <h5 class="step-card-heading">Phơi Nhiễm Hải Quan Quốc Tế</h5>
+              <div class="step-metric-highlight orange">★ ĐIỂM CHẠM SUNEXT</div>
+              <p class="step-card-desc">Cửa ngõ phụ thuộc nguồn cung Châu Á & máy móc CapEx Châu Âu, nơi rủi ro tuân thủ biên giới ABF/DAFF tập trung cao nhất.</p>
+              <div class="step-flow-nodes">
+                <span class="node-pill accent">VRS 78% Chi Tiêu Châu Á</span>
+                <span class="node-pill accent">Máy Móc CapEx 2 Tỷ AUD</span>
+                <span class="node-pill accent">Tro Sô-đa Nhập Khẩu 2836.20</span>
+                <span class="node-pill accent">Xuất Khẩu Giấy Qua RiFL Bomen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-bottom-banner">
+            <div class="banner-icon">🎯</div>
+            <div class="banner-text">
+              <strong>Kết Luận Tình Báo Vận Hành:</strong> VGL kiểm soát chặt chẽ vận tải nội địa và phân phối bán lẻ, nhưng tại <strong>Công đoạn 04 (Xuất Nhập Khẩu & Phơi Nhiễm Biên Giới)</strong>, Visy hoàn toàn mở cửa cho các đối tác chuyên môn hóa sâu về kiểm toán rủi ro thuế quan, tiền kiểm chứng từ C/O tại nguồn Châu Á và thẩm định kiểm dịch sinh học DAFF.
+            </div>
+          </div>
         </div>
 
         <h3 style="font-size:1.15rem; margin-top:2rem; margin-bottom:1rem; color:var(--color-purple);">3.2 Ma trận các cụm cơ hội hải quan (Customs Opportunity Clusters)</h3>
@@ -2862,27 +3700,107 @@ flowchart TD
 
         <h3 style="font-size:1.15rem; margin-top:2rem; margin-bottom:1rem; color:var(--color-purple);">7.2 Phân tích khoảng trống năng lực (Gap Analysis)</h3>
 
-        <!-- MERMAID: GAP ANALYSIS -->
-        <div class="mermaid-box">
-          <pre class="mermaid">
-graph TD
-    subgraph TheManhVGL["THẾ MẠNH TUYỆT ĐỐI CỦA VGL"]
-        V1[Sở hữu giấy phép đại lý hải quan ABF]
-        V2[Am hiểu sâu sắc hệ thống sản xuất Visy]
-        V3[Được bảo trợ bởi lãnh đạo mua sắm tập đoàn]
-        V4[Hệ thống phần mềm CargoWise kết nối tập trung]
-    end
+        <!-- BESPOKE VISUAL: GAP ANALYSIS MATRIX -->
+        <div class="visual-diagram-card">
+          <div class="diagram-header">
+            <div class="diagram-title-box">
+              <span class="diagram-icon">⚖️</span>
+              <div>
+                <h4 class="diagram-title">MA TRẬN ĐỐI TRỌNG NĂNG LỰC & KHOẢNG TRỐNG THÂM NHẬP (MAKE-VS-BUY)</h4>
+                <div class="diagram-subtitle">Phân Tích Thành Trì VGL, Nút Thắt Vận Hành & Điểm Đột Phá Hợp Tác Không Đối Đầu</div>
+              </div>
+            </div>
+            <span class="meta-badge success">GAP ANALYSIS STRATEGY</span>
+          </div>
 
-    subgraph KhoangTrongTanCong["KHOẢNG TRỐNG CHO ĐỐI TÁC NGOÀI TẤN CÔNG"]
-        K1[Thiếu tính độc lập trong kiểm toán tuân thủ nội bộ]
-        K2[Nguy cơ quá tải nhân lực khi vào mùa cao điểm]
-        K3[Mảng bán lẻ VRS mới sáp nhập chưa chuẩn hóa]
-        K4[Luồng tạm xuất sửa chữa khuôn mẫu đòi hỏi may đo]
-        K5[Hàng dự án CapEx cần rà soát Lệnh Giảm Thuế TCO]
-    end
+          <div class="gap-matrix-grid">
+            <!-- Col 1: VGL Strengths -->
+            <div class="gap-col col-vgl-strength">
+              <div class="gap-col-header">
+                <div class="gap-col-title-wrap">
+                  <span class="gap-col-icon">🛡️</span>
+                  <h5 class="gap-col-title">Thế Mạnh Tuyệt Đối Của VGL</h5>
+                </div>
+                <span class="gap-col-badge gray">VÙNG CỐ THỦ (KHÔNG ĐỐI ĐẦU)</span>
+              </div>
+              <p class="gap-col-intro">VGL sở hữu vị thế độc quyền nội bộ vững chắc được ban lãnh đạo tập đoàn bảo vệ:</p>
+              <ul class="gap-col-list">
+                <li>
+                  <strong>Cấp phép Đại lý Hải quan ABF:</strong> Đứng tên pháp nhân VISY LOGISTICS PTY LTD, vận hành trực tiếp trên CargoWise One.
+                </li>
+                <li>
+                  <strong>Am hiểu sâu sắc sản xuất:</strong> Nắm toàn bộ dữ liệu lịch sử sản xuất của các nhà máy Tumut, Penrith, Yatala.
+                </li>
+                <li>
+                  <strong>Bảo trợ thương mại từ Mua sắm:</strong> Denis Conway ưu tiên nội bộ hóa >40 triệu AUD chi tiêu về cho VGL.
+                </li>
+                <li>
+                  <strong>Hạ tầng bến bãi & xe đầu kéo:</strong> Sở hữu đội xe chuyên dụng, ga cạn RiFL Bomen và mạng lưới kho bãi khắp Úc.
+                </li>
+              </ul>
+              <div class="gap-col-footer safe">
+                Chiến thuật: Tuyệt đối không chào mời thay thế đại lý hải quan hay cạnh tranh giá cước.
+              </div>
+            </div>
 
-    TheManhVGL -. Tạo ra nhu cầu .-> KhoangTrongTanCong
-          </pre>
+            <!-- Col 2: VGL Vulnerabilities -->
+            <div class="gap-col col-vgl-weakness">
+              <div class="gap-col-header">
+                <div class="gap-col-title-wrap">
+                  <span class="gap-col-icon">⚠️</span>
+                  <h5 class="gap-col-title">Điểm Nghẽn & Rủi Ro Của VGL</h5>
+                </div>
+                <span class="gap-col-badge orange">NÚT THẮT CỔ CHAI NỘI BỘ</span>
+              </div>
+              <p class="gap-col-intro">Áp lực tăng trưởng nóng và thiếu hụt chuyên gia chuyên sâu tạo ra các lỗ hổng:</p>
+              <ul class="gap-col-list">
+                <li>
+                  <strong>Quá tải mùa cao điểm:</strong> Đội ngũ hải quan nội bộ bị quá tải khi xử lý hàng nghìn SKU bán lẻ VRS cùng lúc với máy móc CapEx.
+                </li>
+                <li>
+                  <strong>Không có nhân sự tiền kiểm tại Châu Á:</strong> Phụ thuộc hoàn toàn vào chứng từ nhà máy gửi sang, phát hiện lỗi C/O khi tàu đã cập cảng.
+                </li>
+                <li>
+                  <strong>Bỏ lỡ cơ chế hoàn thuế & TCO:</strong> Chưa tận dụng hết Lệnh Giảm Thuế (TCO) và hoàn thuế Duty Drawback tro sô-đa Điều 168.
+                </li>
+                <li>
+                  <strong>Rủi ro trách nhiệm nghiêm ngặt (Strict Liability):</strong> Nguy cơ bị ABF xử phạt theo Điều 243T do sai sót phân loại mã HS các SKU mới.
+                </li>
+              </ul>
+              <div class="gap-col-footer warn">
+                Hệ quả: Phí phạt Demurrage/Detention và nguy cơ chậm tiến độ bàn giao cho Bunnings.
+              </div>
+            </div>
+
+            <!-- Col 3: Sunext Value-Add -->
+            <div class="gap-col col-sunext-opp">
+              <div class="gap-col-header">
+                <div class="gap-col-title-wrap">
+                  <span class="gap-col-icon">🚀</span>
+                  <h5 class="gap-col-title">Mũi Nhọn Đột Phá Cho Sunext</h5>
+                </div>
+                <span class="gap-col-badge purple">GIẢI PHÁP TRỢ LỰC BẢO VỆ GIÁ TRỊ</span>
+              </div>
+              <p class="gap-col-intro">Sunext đóng vai trò đối tác công nghệ và đại lý dự phòng chiến lược:</p>
+              <ul class="gap-col-list">
+                <li>
+                  <strong>Đại lý Dự phòng (Overflow Brokerage):</strong> San tải cho VGL trong các đợt cao điểm bán lẻ và dự án công nghiệp quy mô lớn.
+                </li>
+                <li>
+                  <strong>Origin Pre-Clearance Hub tại TP.HCM:</strong> Tiền kiểm 100% C/O ChAFTA, ISPM 15 và mã HS ngay tại nguồn Châu Á trước khi tàu rời bến.
+                </li>
+                <li>
+                  <strong>Chuyên sâu TCO & Thu Hồi Thuế (Duty Recovery):</strong> Soạn thảo hồ sơ TCO máy móc CapEx và hoàn thuế phụ liệu xuất khẩu sang NZ.
+                </li>
+                <li>
+                  <strong>Cam kết SLA Bồi Hoàn Phí Lưu Cảng:</strong> Bảo đảm tỷ lệ Pre-Clearance >95%, triệt tiêu chi phí phạt cầu cảng cho Visy.
+                </li>
+              </ul>
+              <div class="gap-col-footer highlight">
+                Định vị: Người bạn đồng hành bảo vệ giá trị cho Denis Conway và giảm tải cho Brant Crowley.
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -3181,42 +4099,185 @@ graph TD
         <div class="section-tag">CHƯƠNG 09</div>
         <h2 class="section-title">Sơ Đồ Trung Tâm Ra Quyết Định (Buying Centre Dynamics)</h2>
 
-        <!-- MERMAID: BUYING CENTRE -->
-        <div class="mermaid-box">
-          <pre class="mermaid">
-graph TD
-    subgraph CapLanhDao["BAN LÃNH ĐẠO CẤP CAO"]
-        MDW[Mark De Wit - CEO Group]
-        SR[Sean Richards - President VGL]
-    end
+        <!-- BESPOKE VISUAL: BUYING CENTRE ORG-CHART -->
+        <div class="visual-diagram-card">
+          <div class="diagram-header">
+            <div class="diagram-title-box">
+              <span class="diagram-icon">🏛️</span>
+              <div>
+                <h4 class="diagram-title">BẢN ĐỒ PHÂN TẦNG QUYỀN LỰC & MẠCH RA QUYẾT ĐỊNH (BUYING CENTRE DYNAMICS)</h4>
+                <div class="diagram-subtitle">10 Nhân Sự Chủ Chốt • Ma Trận Ảnh Hưởng & Tuyến Thẩm Định Phê Duyệt Mua Sắm</div>
+              </div>
+            </div>
+            <span class="meta-badge purple">STAKEHOLDER INFLUENCE ARCHITECTURE</span>
+          </div>
 
-    subgraph QuyenKinhTe["QUYỀN MUA SẮM THƯƠNG MẠI"]
-        BT[Brian Thorpe - Head of Procurement / Vice-Chair APSA<br/>★ NGƯỜI ĐỊNH HÌNH QUAN HỆ ĐỐI TÁC & THUẾ QUAN]
-        DC[Denis Conway - Group Procurement Manager Logistics<br/>★ NGƯỜI MUA TRỰC TIẾP & ĐÀM PHÁN HỢP ĐỒNG]
-        GC[Gary Combes - GM Direct Procurement]
-    end
+          <div class="org-hierarchy-container">
+            
+            <!-- TIER 1 -->
+            <div class="org-tier-row">
+              <div class="tier-label-box">
+                <span class="tier-badge">TẦNG 1</span>
+                <span class="tier-role">BAN LÃNH ĐẠO TỐI CAO (EXECUTIVE SPONSORS)</span>
+              </div>
+              <div class="tier-cards-grid">
+                <div class="exec-card sponsor">
+                  <div class="exec-card-head">
+                    <div class="exec-avatar">MD</div>
+                    <div>
+                      <div class="exec-name">Mark De Wit</div>
+                      <div class="exec-title">CEO — Visy Group</div>
+                    </div>
+                  </div>
+                  <div class="exec-card-duty">Quản trị toàn bộ tập đoàn & P&L đa quốc gia; bảo trợ chính sách kinh tế tuần hoàn và cam kết đầu tư công nghiệp 2 tỷ AUD.</div>
+                </div>
+                <div class="exec-card sponsor">
+                  <div class="exec-card-head">
+                    <div class="exec-avatar">SR</div>
+                    <div>
+                      <div class="exec-name">Sean Richards</div>
+                      <div class="exec-title">President — Visy Global Logistics</div>
+                    </div>
+                  </div>
+                  <div class="exec-card-duty">Kiến trúc sư đưa VGL vươn tầm toàn cầu; bảo vệ doanh thu nội bộ. Mục tiêu: Chỉ tiếp cận từ góc độ đối tác đối ứng (reciprocal partner).</div>
+                </div>
+              </div>
+            </div>
 
-    subgraph CanBoKyThuat["RÀO CẢN KỸ THUẬT & TUYỆT ĐỐI TUÂN THỦ"]
-        BC[Brant Crowley - National Customs & Trade Compliance Manager<br/>★ NGƯỜI DUYỆT NĂNG LỰC HẢI QUAN & TỰ DOẠT HÀNG DỰ ÁN]
-        UB[Ulf Barnard - GM Global Forwarding Operations VGL]
-        NM[Nella McAllister - Head of Compliance Global]
-    end
+            <!-- TIER CONNECTOR -->
+            <div class="tier-connector-line">
+              <div class="connector-arrow">▼ Bổ nhiệm & Giao ngân sách mua sắm logistics >700M AUD</div>
+            </div>
 
-    subgraph NguoiBaoTroVanHanh["ĐẦU MỐI BẢO TRỢ THÍ ĐIỂM (PILOT CHAMPIONS)"]
-        LD[Lee Du - Source & Supply Chain Manager, Visy Retail<br/>★ MỤC TIÊU SỐ 1 CHO GÓI THÍ ĐIỂM VRS]
-        MS[Mark Sloane - Logistics Manager NSW/VIC/WA, Legacy Zenexus]
-        CT[Chuong Tong - Country Manager VGL Vietnam / TP.HCM<br/>★ REGIONAL CONNECTOR - ĐIỂM TỰA ĐẦU XUẤT VN]
-        WB[Wayne Boxshall - Country Manager VGL Australia]
-    end
+            <!-- TIER 2 (PRIMARY TARGETS) -->
+            <div class="org-tier-row highlight-target-row">
+              <div class="tier-label-box orange">
+                <span class="tier-badge orange">TẦNG 2</span>
+                <span class="tier-role orange">NGƯỜI QUYẾT ĐỊNH MUA SẮM (COMMERCIAL GATEKEEPERS) ★ MỤC TIÊU SỐ 1</span>
+              </div>
+              <div class="tier-cards-grid">
+                <div class="exec-card commercial primary-focus">
+                  <div class="exec-card-head">
+                    <div class="exec-avatar orange">DC</div>
+                    <div>
+                      <div class="exec-name">Denis Conway <span class="hot-badge">ECONOMIC BUYER</span></div>
+                      <div class="exec-title">Group Procurement Manager — Logistics</div>
+                    </div>
+                  </div>
+                  <div class="exec-card-duty"><strong>Quyền lực thực tế cao nhất:</strong> Quản lý danh mục mua sắm logistics >700 triệu AUD; đã trực tiếp nội bộ hóa >40M AUD về VGL. Thông điệp tiếp cận: <em>Bảo vệ giá trị (Value Assurance), kiểm toán ngăn rò rỉ thuế, SLA loại bỏ phí phạt cảng.</em></div>
+                </div>
+                <div class="exec-card commercial">
+                  <div class="exec-card-head">
+                    <div class="exec-avatar purple">BT</div>
+                    <div>
+                      <div class="exec-name">Brian Thorpe</div>
+                      <div class="exec-title">Head of Procurement / Logistics Procurement</div>
+                    </div>
+                  </div>
+                  <div class="exec-card-duty"><strong>Phó Chủ tịch APSA / Lãnh đạo FTA:</strong> Định hình chính sách cảng biển và hải quan vĩ mô. Tiếp cận bằng các sáng kiến đơn giản hóa thủ tục (Simplified Trade System) và tiếng nói chính sách ngành.</div>
+                </div>
+              </div>
+            </div>
 
-    BT --- DC
-    DC --- BC
-    BC --- LD
-    SR --- WB
-    UB --- BC
-    LD -. Thí điểm đề xuất .-> DC
-    BC -. Thẩm định nghiệp vụ .-> DC
-          </pre>
+            <!-- TIER CONNECTOR -->
+            <div class="tier-connector-line">
+              <div class="connector-arrow">▼ Chuyển giao thẩm định chuyên môn & Thí điểm thực địa</div>
+            </div>
+
+            <!-- TIER 3 & 4 DUAL ROW -->
+            <div class="org-dual-grid">
+              <!-- TIER 3 -->
+              <div class="org-col-tier">
+                <div class="tier-label-box purple">
+                  <span class="tier-badge purple">TẦNG 3</span>
+                  <span class="tier-role purple">THẨM ĐỊNH KỸ THUẬT & PHÁP LÝ (TECHNICAL GATEKEEPERS)</span>
+                </div>
+                <div class="exec-cards-vertical">
+                  <div class="exec-card technical">
+                    <div class="exec-card-head">
+                      <div class="exec-avatar purple">BC</div>
+                      <div>
+                        <div class="exec-name">Brant Crowley</div>
+                        <div class="exec-title">National Customs & Trade Compliance Manager</div>
+                      </div>
+                    </div>
+                    <div class="exec-card-duty">Nắm quyền thẩm định năng lực phân loại mã HS, kiểm soát hàng CapEx và rủi ro DAFF. Tiếp cận: Định vị Sunext là <em>cánh tay nối dài giải tỏa áp lực</em> cho đội ngũ của anh.</div>
+                  </div>
+                  <div class="exec-card technical">
+                    <div class="exec-card-head">
+                      <div class="exec-avatar">NM</div>
+                      <div>
+                        <div class="exec-name">Nella McAllister</div>
+                        <div class="exec-title">Head of Compliance — Global, Visy Logistics</div>
+                      </div>
+                    </div>
+                    <div class="exec-card-duty">Thẩm định hồ sơ năng lực pháp lý, tiêu chuẩn chống nô lệ hiện đại và an ninh chuỗi cung ứng.</div>
+                  </div>
+                  <div class="exec-card technical">
+                    <div class="exec-card-head">
+                      <div class="exec-avatar">UB</div>
+                      <div>
+                        <div class="exec-name">Ulf Barnard</div>
+                        <div class="exec-title">GM — Global Forwarding Operations, VGL AU</div>
+                      </div>
+                    </div>
+                    <div class="exec-card-duty">Đánh giá chất lượng vận hành giao nhận và độ ổn định của dữ liệu thông quan điện tử.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TIER 4 -->
+              <div class="org-col-tier">
+                <div class="tier-label-box green">
+                  <span class="tier-badge green">TẦNG 4</span>
+                  <span class="tier-role green">ĐẦU MỐI BẢO TRỢ THÍ ĐIỂM (PILOT CHAMPIONS)</span>
+                </div>
+                <div class="exec-cards-vertical">
+                  <div class="exec-card champion highlight-pilot">
+                    <div class="exec-card-head">
+                      <div class="exec-avatar green">LD</div>
+                      <div>
+                        <div class="exec-name">Lee Du <span class="hot-badge green">PILOT TARGET #1</span></div>
+                        <div class="exec-title">Source & Supply Chain Manager — Visy Retail Services</div>
+                      </div>
+                    </div>
+                    <div class="exec-card-duty"><strong>Trọng điểm thí điểm:</strong> Quản lý 78% chi tiêu mua hàng Châu Á cho chuỗi Bunnings. Cần giải pháp Pre-clearance >95% và kiểm tra C/O ChAFTA tại nguồn.</div>
+                  </div>
+                  <div class="exec-card champion highlight-vn">
+                    <div class="exec-card-head">
+                      <div class="exec-avatar green">CT</div>
+                      <div>
+                        <div class="exec-name">Chuong Tong <span class="hot-badge vn">VIETNAM WEDGE</span></div>
+                        <div class="exec-title">Country Manager — VGL Vietnam (TP.HCM)</div>
+                      </div>
+                    </div>
+                    <div class="exec-card-duty"><strong>Điểm tựa Việt Nam:</strong> Trụ sở tại Tòa nhà CentrePoint Phú Nhuận. Tiếp cận trực tiếp đề xuất Sunext làm BPO Hub kiểm chứng từ đầu xuất sang Úc.</div>
+                  </div>
+                  <div class="exec-card champion">
+                    <div class="exec-card-head">
+                      <div class="exec-avatar">MS</div>
+                      <div>
+                        <div class="exec-name">Mark Sloane</div>
+                        <div class="exec-title">Logistics Manager NSW, VIC & WA (VRS)</div>
+                      </div>
+                    </div>
+                    <div class="exec-card-duty">Am hiểu sâu kho bãi Dandenong South và Minto; ủng hộ việc rút hàng nhanh tại cảng tránh tắc nghẽn.</div>
+                  </div>
+                  <div class="exec-card champion">
+                    <div class="exec-card-head">
+                      <div class="exec-avatar">WB</div>
+                      <div>
+                        <div class="exec-name">Wayne Boxshall</div>
+                        <div class="exec-title">Country Manager — Visy Logistics Australia</div>
+                      </div>
+                    </div>
+                    <div class="exec-card-duty">Phụ trách vận tải nội địa và 3PL. Cần cam kết không chào bán xe tải nội địa để vô hiệu hóa sự phản đối.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <h3 style="font-size:1.15rem; margin-top:2rem; margin-bottom:1rem; color:var(--color-purple);">Hồ sơ chi tiết 10 nhân sự chủ chốt & Kịch bản tiếp cận</h3>
@@ -3430,19 +4491,96 @@ graph TD
           Để thâm nhập mượt mà, giải pháp công nghệ đề xuất phải tuân thủ kiến trúc <strong>"Headless Customs Integration" (Tích hợp Hải quan Không Cần Giao diện Mới)</strong>:
         </p>
 
-        <!-- MERMAID: INTEGRATION ARCHITECTURE -->
-        <div class="mermaid-box">
-          <pre class="mermaid">
-graph TD
-    EXT["Hệ Thống Đại Lý Hải Quan Độc Lập"]
-    GATEWAY["Cổng Kết Nối Trung Gian Tự Động (API Gateway)<br/>Giao thức eAdaptor / Universal Customs JSON/XML"]
-    CW["CargoWise One của VGL<br/>• Cập nhật số tờ khai ICS<br/>• Trạng thái thông quan 24/7<br/>• Đính kèm C/O & Packing Decl"]
-    SAP["SAP / ERP Trung Tâm Visy<br/>• Tự động thanh toán GST/Duty<br/>• Hạch toán chi phí giá vốn hàng nhập<br/>• Đối soát tự động chứng từ DAFF"]
+        <!-- BESPOKE VISUAL: HEADLESS CUSTOMS ARCHITECTURE -->
+        <div class="visual-diagram-card">
+          <div class="diagram-header">
+            <div class="diagram-title-box">
+              <span class="diagram-icon">💻</span>
+              <div>
+                <h4 class="diagram-title">KIẾN TRÚC TÍCH HỢP HỆ THỐNG ĐA TẦNG "HEADLESS CUSTOMS INTEGRATION"</h4>
+                <div class="diagram-subtitle">Giao Thức eAdaptor Universal XML/JSON • Kết Nối Đồng Thời CargoWise One & SAP S/4HANA</div>
+              </div>
+            </div>
+            <span class="meta-badge purple">HEADLESS ARCHITECTURE</span>
+          </div>
 
-    EXT -->|Bắn dữ liệu thông quan tự động| GATEWAY
-    GATEWAY -->|Đồng bộ hồ sơ vận tải| CW
-    GATEWAY -->|Đối soát tài chính & chi phí| SAP
-          </pre>
+          <div class="headless-arch-flow">
+            <!-- Top System -->
+            <div class="arch-layer top-layer">
+              <div class="arch-box external-broker">
+                <div class="arch-box-badge">BÊN NGOÀI (EXTERNAL COMPLIANCE HUB)</div>
+                <h5 class="arch-box-title">Hệ Thống Đại Lý Hải Quan Độc Lập / Sunext Trade Hub</h5>
+                <div class="arch-box-details">
+                  <span>• Tự động chuẩn hóa phân loại HS Code</span>
+                  <span>• OCR kiểm định C/O ChAFTA & RCEP</span>
+                  <span>• Soạn thảo hồ sơ TCO & Kiểm dịch DAFF</span>
+                  <span>• Quản lý thông quan điện tử theo thời gian thực</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Data Pipe Flow -->
+            <div class="arch-data-pipe">
+              <div class="pipe-line"></div>
+              <div class="pipe-label">
+                <span class="pipe-pulse"></span>
+                <span>Bắn dữ liệu thông quan tự động 2 chiều (Giao thức eAdaptor / Universal XML API)</span>
+              </div>
+            </div>
+
+            <!-- Middle Gateway -->
+            <div class="arch-layer middle-layer">
+              <div class="arch-box gateway-hub">
+                <div class="gateway-icon">⚡</div>
+                <div class="gateway-info">
+                  <div class="gateway-title">CỔNG KẾT NỐI TRUNG GIAN TỰ ĐỘNG (API GATEWAY)</div>
+                  <div class="gateway-desc">Chuẩn hóa dữ liệu theo đặc tả WiseTech Global eAdaptor • Không tạo giao diện mới • Zero Portal Fatigue</div>
+                </div>
+                <div class="gateway-badges">
+                  <span class="gateway-pill">Milestone Sync</span>
+                  <span class="gateway-pill">RESTful / Webhook</span>
+                  <span class="gateway-pill">Mã Hóa 256-bit</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Split Pipe Flow -->
+            <div class="arch-split-pipes">
+              <div class="split-branch left">
+                <div class="branch-label">Đồng bộ hồ sơ vận tải 24/7</div>
+                <div class="branch-arrow">▼</div>
+              </div>
+              <div class="split-branch right">
+                <div class="branch-label">Đối soát tài chính, thuế & chứng từ</div>
+                <div class="branch-arrow">▼</div>
+              </div>
+            </div>
+
+            <!-- Bottom Two Core Systems -->
+            <div class="arch-layer bottom-layer">
+              <!-- Left: CargoWise One -->
+              <div class="arch-box internal-cw">
+                <div class="arch-box-badge purple">VẬN HÀNH HẢI QUAN & GIAO NHẬN</div>
+                <h5 class="arch-box-title">CargoWise One của VGL (Australia)</h5>
+                <ul class="arch-feature-list">
+                  <li><strong>Cập nhật số tờ khai ICS:</strong> Tự động ghi nhận số tờ khai hải quan điện tử vào hồ sơ lô hàng VGL.</li>
+                  <li><strong>Trạng thái thông quan 24/7:</strong> Cập nhật mốc trạng thái (Under Clear, Cleared, DAFF Direction to Inspect).</li>
+                  <li><strong>Đính kèm hồ sơ số:</strong> Tự động tải lưu C/O, Packing Declaration và chứng thư hun trùng vào e-Docs.</li>
+                </ul>
+              </div>
+
+              <!-- Right: SAP S/4HANA -->
+              <div class="arch-box internal-sap">
+                <div class="arch-box-badge orange">QUẢN TRỊ TÀI CHÍNH & VẬT TƯ LÕI</div>
+                <h5 class="arch-box-title">SAP S/4HANA Trung Tâm Visy Group</h5>
+                <ul class="arch-feature-list">
+                  <li><strong>Tự động thanh toán GST/Duty:</strong> Đối soát số thuế nhập khẩu với mã tài khoản kế toán SAP FI/CO.</li>
+                  <li><strong>Hạch toán giá vốn hàng nhập:</strong> Tự động tính toán Landed Cost vào phân hệ SAP MM cho VRS & Visy Glass.</li>
+                  <li><strong>Đối soát chứng từ DAFF:</strong> Tự động khớp lệnh giải tỏa sinh học với hệ thống kiểm soát kho bãi SAP EWM.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         <h3 style="font-size:1.15rem; margin-top:2rem; margin-bottom:1rem; color:var(--color-purple);">3 Trụ Cột Của Mô Hình "Headless Customs Integration"</h3>
@@ -3532,19 +4670,86 @@ graph TD
           </div>
         </div>
 
-        <!-- 11.3 MERMAID BPO HUB -->
-        <h3 style="font-size:1.15rem; margin-top:1.5rem; margin-bottom:1rem; color:var(--color-purple);">11.3 Mô Hình Hợp Tác: Origin Pre-Clearance & Trade Compliance BPO Hub</h3>
+        <!-- BESPOKE VISUAL: BPO ORIGIN PRE-CLEARANCE PIPELINE -->
+        <div class="visual-diagram-card">
+          <div class="diagram-header">
+            <div class="diagram-title-box">
+              <span class="diagram-icon">🌏</span>
+              <div>
+                <h4 class="diagram-title">QUY TRÌNH TIỀN KIỂM CHỨNG TỪ & BPO HUB HAI ĐẦU XUẤT - NHẬP (ORIGIN PRE-CLEARANCE)</h4>
+                <div class="diagram-subtitle">Kiểm Soát Rủi Ro Ngay Tại Nguồn Châu Á Trước Khi Tàu Xuất Bến • Bảo Đảm Pre-Clearance 100%</div>
+              </div>
+            </div>
+            <span class="meta-badge success">VIETNAM ORIGIN BPO HUB</span>
+          </div>
 
-        <div class="mermaid-box">
-          <pre class="mermaid">
-graph TD
-    VENDOR["Nhà Cung Cấp Châu Á / VRS Vendors"]
-    SUNEXT["SUNEXT Trade Compliance & BPO Hub tại Việt Nam<br/>1. Kiểm tra tính hợp lệ C/O Form ChAFTA / RCEP / CPTPP<br/>2. Đối soát hình ảnh dấu kiểm dịch bao bì gỗ ISPM 15<br/>3. Rà soát chứng chỉ Sedex / SMETA của nhà máy<br/>4. Chuẩn hóa dữ liệu biểu thuế mã HS theo chuẩn ABF"]
-    CW["Hệ Thống CargoWise One của VGL / ABF ICS tại Úc<br/>★ ĐẢM BẢO TỶ LỆ PRE-CLEARANCE 100% KHI HÀNG VỀ CẢNG ÚC"]
+          <div class="bpo-pipeline-grid">
+            <!-- Stage 1 -->
+            <div class="pipeline-card stage-1">
+              <div class="pipeline-card-top">
+                <span class="pipeline-step-badge">BƯỚC 1</span>
+                <span class="pipeline-loc-badge">TẠI NGUỒN CHÂU Á</span>
+              </div>
+              <h5 class="pipeline-heading">Nhà Cung Cấp / VRS Vendors</h5>
+              <p class="pipeline-desc">Các nhà máy gia công phụ kiện kim khí, bao bì carton và màng nhựa tại Trung Quốc, Việt Nam, Đài Loan.</p>
+              <div class="pipeline-action-box">
+                <strong>Hành động trước 48h khi tàu chạy:</strong>
+                <p>Gửi bộ chứng từ Draft điện tử: Commercial Invoice, Packing List, C/O Form ChAFTA/RCEP, Ảnh chụp dấu nhiệt bao bì gỗ ISPM 15.</p>
+              </div>
+              <div class="pipeline-timing-tag">⏱️ 48 Giờ Trước Khi Rời Cảng</div>
+            </div>
 
-    VENDOR -->|Gửi trước bộ chứng từ Draft: Invoice, Packing List, C/O, ISPM 15| SUNEXT
-    SUNEXT -->|Đẩy dữ liệu sạch đã chuẩn hóa qua Universal XML API| CW
-          </pre>
+            <!-- Stage 2: Sunext Hub -->
+            <div class="pipeline-card stage-2 highlight-hub">
+              <div class="pipeline-card-top">
+                <span class="pipeline-step-badge purple">BƯỚC 2</span>
+                <span class="pipeline-loc-badge purple">TP. HỒ CHÍ MINH (CÙNG MÚI GIỜ)</span>
+              </div>
+              <h5 class="pipeline-heading">SUNEXT Trade Compliance & BPO Hub</h5>
+              <p class="pipeline-desc">Bộ máy thẩm định tự động kết hợp chuyên gia tuân thủ tại Tòa nhà CentrePoint Phú Nhuận.</p>
+              <div class="hub-tasks-grid">
+                <div class="hub-task-item">
+                  <span class="task-check">✓</span>
+                  <span><strong>Thẩm định C/O ChAFTA / RCEP:</strong> Kiểm tra quy tắc PSR & hóa đơn bên thứ ba Rule 13.</span>
+                </div>
+                <div class="hub-task-item">
+                  <span class="task-check">✓</span>
+                  <span><strong>Computer Vision ISPM 15:</strong> Nhận diện mã nhiệt HT/MB trên pallet gỗ trước khi đóng cont.</span>
+                </div>
+                <div class="hub-task-item">
+                  <span class="task-check">✓</span>
+                  <span><strong>Rà soát Sedex / SMETA:</strong> Đảm bảo 100% tuân thủ tiêu chuẩn chuỗi bán lẻ Bunnings.</span>
+                </div>
+                <div class="hub-task-item">
+                  <span class="task-check">✓</span>
+                  <span><strong>Chuẩn hóa mã số HS:</strong> Gán mã 10 chữ số chuẩn Working Tariff Schedule 3 của ABF.</span>
+                </div>
+              </div>
+              <div class="pipeline-timing-tag purple">⚡ Xử lý trong 4-6 giờ • Sửa lỗi ngay tại nguồn</div>
+            </div>
+
+            <!-- Stage 3: Destination -->
+            <div class="pipeline-card stage-3">
+              <div class="pipeline-card-top">
+                <span class="pipeline-step-badge green">BƯỚC 3</span>
+                <span class="pipeline-loc-badge green">CẢNG ĐÍCH ÚC (MEL / SYD / BNE)</span>
+              </div>
+              <h5 class="pipeline-heading">Hệ Thống CargoWise One VGL & ABF</h5>
+              <p class="pipeline-desc">Dữ liệu thông quan sạch được đẩy thẳng vào CargoWise One qua Universal XML API trước khi tàu cập cảng 72h.</p>
+              <div class="dest-results-list">
+                <div class="dest-result-item success">
+                  <strong>Tỷ lệ Pre-Clearance >98%:</strong> Thông quan tự động ngay khi hoa tiêu dẫn tàu vào luồng.
+                </div>
+                <div class="dest-result-item success">
+                  <strong>Triệt tiêu phí Demurrage/Detention:</strong> Không bị lưu giữ container chờ bổ sung chứng từ.
+                </div>
+                <div class="dest-result-item success">
+                  <strong>Bảo vệ hợp đồng Bunnings:</strong> Giao hàng đúng hạn On-Shelf Availability >98%.
+                </div>
+              </div>
+              <div class="pipeline-timing-tag green">🎉 Thông Quan Suốt 24/7 Không Điểm Nghẽn</div>
+            </div>
+          </div>
         </div>
 
         <!-- 11.4 CONTRACT MECHANISM -->
